@@ -1,7 +1,7 @@
 ---
 title: Sit Play Love
 description: Dog Training, Walking, and Matchmaking
-date: '2018-09-01'
+date: '2018-08-01'
 section: project
 cover_image: './sitplaylove-mockup.png'
 tags: ['javascript', 'react', 'gatsbyjs', 'puppies']

@@ -2055,6 +2055,10 @@ progress::-moz-progress-bar {
   background-color: #fdfdfd;
 }
 
+.btn.white a {
+  color: white;
+}
+
 .clear {
   opacity: 0.5;
 }

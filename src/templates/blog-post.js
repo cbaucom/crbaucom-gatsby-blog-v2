@@ -84,11 +84,6 @@ class BlogPostTemplate extends React.Component {
                   {nicetime(currentDate, postDate)}
                 </span> */}
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                <hr
-                  style={{
-                    marginBottom: 10,
-                  }}
-                />
 
                 <ul
                   style={{
@@ -101,14 +96,22 @@ class BlogPostTemplate extends React.Component {
                 >
                   <li>
                     {previous && (
-                      <Link to={previous.fields.slug} rel="prev">
+                      <Link
+                        to={previous.fields.slug}
+                        rel="prev"
+                        className="btn white"
+                      >
                         ← {previous.frontmatter.title}
                       </Link>
                     )}
                   </li>
                   <li>
                     {next && (
-                      <Link to={next.fields.slug} rel="next">
+                      <Link
+                        to={next.fields.slug}
+                        rel="next"
+                        className="btn white"
+                      >
                         {next.frontmatter.title} →
                       </Link>
                     )}

@@ -1,13 +1,13 @@
 ---
 title: Memory Game
-? description
+description:
 date: '2018-03-13'
 section: project
 cover_image: './memory-game.png'
 tags: ['javascript', 'games']
 ---
 
-<p><img src="./memory-game.png" alt="" /></p>
+<p><img src="./memory-game.png" alt="Cover Image" /></p>
 
 ## How The Game Works
 

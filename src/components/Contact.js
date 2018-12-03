@@ -64,7 +64,9 @@ export default class Contact extends Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label className="col-sm-3">Email: </label>
+                  <label htmlFor="email" className="col-sm-3">
+                    Email:{' '}
+                  </label>
                   <input
                     id="email"
                     className="col-sm-9 form-control"
@@ -75,7 +77,9 @@ export default class Contact extends Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label className="col-sm-3">Phone: </label>
+                  <label htmlFor="phone" className="col-sm-3">
+                    Phone:{' '}
+                  </label>
                   <input
                     id="phone"
                     className="col-sm-9 form-control"
@@ -86,7 +90,9 @@ export default class Contact extends Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label className="col-sm-3">Message: </label>
+                  <label htmlFor="message" className="col-sm-3">
+                    Message:{' '}
+                  </label>
                   <textarea
                     id="message"
                     className="col-sm-9 form-control"

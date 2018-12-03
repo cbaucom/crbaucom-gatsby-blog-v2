@@ -1,16 +1,16 @@
 ---
 title: Sit Play Love
-description: Dog Training, Walking, and Matchmaking
+description: Dog lovers, trainers and rescue advocates
 date: '2018-08-01'
 section: project
 cover_image: './sitplaylove-mockup.png'
 tags: ['javascript', 'react', 'gatsbyjs', 'puppies']
 ---
 
-![Website mockup](sitplaylove-mockup.png)
+![Website mockup](https://res.cloudinary.com/crbaucom/image/upload/v1543818900/crbaucom-images/sitplaylove-mockup.png)
 
 At Sit Play Love, they are avid dog lovers, trainers and rescue advocates. Not only do they walk and train dogs, they also foster and have had great success at matchmaking! Visit their site and contact them today if you are in the L.A. area and looking to foster/adopt puppies that desperately need forever families.
 
-Built with [GatsbyJS](https://www.gatsbyjs.org/).
+Built with [GatsbyJS](https://www.gatsbyjs.org/) and deployed on [Netlify](https://netlify.com/).
 
-<p class="centered mt2"><a href="https://sitplaylove.org/" class="btn">Visit the live site</a></p>
+<p class="centered mt2"><a href="https://sitplaylove.org/" class="btn">Visit the site!</a></p>

@@ -46,7 +46,7 @@ class BlogIndex extends React.Component {
         <div className="Frontpage">
           <div className=" Frontpage__about pt2">
             <div className="Frontpage__avatar col-sm-4">
-              <img src={CrbaucomPortrait} />
+              <img src={CrbaucomPortrait} alt="my portrait" />
             </div>
             <div className="container Frontpage__about__blurb col-sm-8">
               <h1>Hello, world.</h1>
@@ -90,8 +90,8 @@ class BlogIndex extends React.Component {
                   <div className="col-md-9 vertical-center">
                     <Player
                       playsInline
-                      poster="https://resume.crbaucom.com/files/sprayAnna.jpg"
-                      src="https://resume.crbaucom.com/files/sprayAnnaKillington.mp4"
+                      poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817179/crbaucom-images/sprayAnna.jpg"
+                      src="https://res.cloudinary.com/crbaucom/video/upload/v1543816933/videos/sprayAnnaKillington.mp4"
                     >
                       <BigPlayButton position="center" />
                       <ControlBar autoHide={false}>

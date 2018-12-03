@@ -16,7 +16,10 @@ export default props => {
   return (
     <figure className="Featured container">
       <div className="image">
-        <Img sizes={featured.frontmatter.cover_image.childImageSharp.fluid} />
+        <Img
+          sizes={featured.frontmatter.cover_image.childImageSharp.fluid}
+          alt="Cover Image"
+        />
       </div>
       <figcaption>
         <Link
@@ -30,7 +33,11 @@ export default props => {
             {featured.frontmatter.section
               ? links[featured.frontmatter.section]
               : 'Read article'}
-            <img src={arrowRight} className="icon arrow right" />
+            <img
+              src={arrowRight}
+              className="icon arrow right"
+              alt="right arrow"
+            />
           </Link>
           <span className="date">{nicetime(currentDate, postDate)}</span>
         </aside>

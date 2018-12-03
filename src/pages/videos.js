@@ -21,8 +21,8 @@ export default class Frontpage extends Component {
               <article className="Card small">
                 <Player
                   playsInline
-                  poster="https://resume.crbaucom.com/files/sprayAnna.jpg"
-                  src="https://resume.crbaucom.com/files/sprayAnnaKillington.mp4"
+                  poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817179/crbaucom-images/sprayAnna.jpg"
+                  src="https://res.cloudinary.com/crbaucom/video/upload/v1543816933/videos/sprayAnnaKillington.mp4"
                 >
                   <BigPlayButton position="center" />
                   <ControlBar autoHide={false}>
@@ -48,8 +48,8 @@ export default class Frontpage extends Component {
               <article className="Card small">
                 <Player
                   playsInline
-                  poster="https://resume.crbaucom.com/files/timelapsecover.jpg"
-                  src="https://resume.crbaucom.com/files/TimeLapse.mov"
+                  poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817180/crbaucom-images/timelapsecover.jpg"
+                  src="https://res.cloudinary.com/crbaucom/video/upload/v1543816990/videos/TimeLapse.mov"
                 >
                   <BigPlayButton position="center" />
                   <ControlBar autoHide={false}>
@@ -72,8 +72,8 @@ export default class Frontpage extends Component {
               <article className="Card small">
                 <Player
                   playsInline
-                  poster="https://resume.crbaucom.com/files/crestedbutte.jpg"
-                  src="https://resume.crbaucom.com/files/CrestedButte-House.appleuniversal.mp4"
+                  poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817169/crbaucom-images/crestedbutte.jpg"
+                  src="https://res.cloudinary.com/crbaucom/video/upload/v1543817009/videos/CrestedButte-House.appleuniversal.mp4"
                 >
                   <BigPlayButton position="center" />
                   <ControlBar autoHide={false}>
@@ -93,8 +93,8 @@ export default class Frontpage extends Component {
               <article className="Card small">
                 <Player
                   playsInline
-                  poster="https://resume.crbaucom.com/files/DaMowgliBird.jpg"
-                  src="https://resume.crbaucom.com/files/DaMowgliBird.mp4"
+                  poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817169/crbaucom-images/DaMowgliBird.jpg"
+                  src="https://res.cloudinary.com/crbaucom/video/upload/v1543817017/videos/DaMowgliBird.mp4"
                 >
                   <BigPlayButton position="center" />
                   <ControlBar autoHide={false}>
@@ -114,8 +114,8 @@ export default class Frontpage extends Component {
               <article className="Card small">
                 <Player
                   playsInline
-                  poster="https://resume.crbaucom.com/files/cbair.jpg"
-                  src="https://resume.crbaucom.com/files/BreckDocumentaryTrailer.m4v"
+                  poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817168/crbaucom-images/cbair.jpg"
+                  src="https://res.cloudinary.com/crbaucom/video/upload/v1543817022/videos/BreckDocumentaryTrailer.mp4"
                 >
                   <BigPlayButton position="center" />
                   <ControlBar autoHide={false}>
@@ -139,8 +139,8 @@ export default class Frontpage extends Component {
               <article className="Card small">
                 <Player
                   playsInline
-                  poster="https://resume.crbaucom.com/files/breckmtnview.jpg"
-                  src="https://resume.crbaucom.com/files/BreckenridgeTrailer2.m4v"
+                  poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817168/crbaucom-images/breckmtnview.jpg"
+                  src="https://res.cloudinary.com/crbaucom/video/upload/v1543817032/videos/BreckenridgeTrailer2.mp4"
                 >
                   <BigPlayButton position="center" />
                   <ControlBar autoHide={false}>
@@ -164,8 +164,8 @@ export default class Frontpage extends Component {
               <article className="Card small">
                 <Player
                   playsInline
-                  poster="https://resume.crbaucom.com/files/snowkid.jpg"
-                  src="https://resume.crbaucom.com/files/BreckLarryDrama.m4v"
+                  poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817178/crbaucom-images/snowkid.jpg"
+                  src="https://res.cloudinary.com/crbaucom/video/upload/v1543817037/videos/BreckLarryDrama.mp4"
                 >
                   <BigPlayButton position="center" />
                   <ControlBar autoHide={false}>
@@ -187,8 +187,8 @@ export default class Frontpage extends Component {
               <article className="Card small">
                 <Player
                   playsInline
-                  poster="https://resume.crbaucom.com/files/redlight.jpg"
-                  src="https://resume.crbaucom.com/files/istheredlightON.m4v"
+                  poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817178/crbaucom-images/redlight.jpg"
+                  src="https://res.cloudinary.com/crbaucom/video/upload/v1543817050/videos/istheredlightON.mp4"
                 >
                   <BigPlayButton position="center" />
                   <ControlBar autoHide={false}>
@@ -208,8 +208,8 @@ export default class Frontpage extends Component {
               <article className="Card small">
                 <Player
                   playsInline
-                  poster="https://resume.crbaucom.com/files/KillingtonBikePark.jpg"
-                  src="https://resume.crbaucom.com/files/KillingtonBikePark.appleuniversal.mp4"
+                  poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817178/crbaucom-images/KillingtonBikePark.jpg"
+                  src="https://res.cloudinary.com/crbaucom/video/upload/v1543817063/videos/KillingtonBikePark.appleuniversal.mp4"
                 >
                   <BigPlayButton position="center" />
                   <ControlBar autoHide={false}>
@@ -229,8 +229,8 @@ export default class Frontpage extends Component {
               <article className="Card small">
                 <Player
                   playsInline
-                  poster="https://resume.crbaucom.com/files/drivetowork.jpg"
-                  src="https://resume.crbaucom.com/files/drivetowork.mov"
+                  poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817170/crbaucom-images/drivetowork.jpg"
+                  src="https://res.cloudinary.com/crbaucom/video/upload/v1543817076/videos/drivetowork.webm"
                 >
                   <BigPlayButton position="center" />
                   <ControlBar autoHide={false}>
@@ -250,8 +250,8 @@ export default class Frontpage extends Component {
               <article className="Card small">
                 <Player
                   playsInline
-                  poster="https://resume.crbaucom.com/files/driverock.jpg"
-                  src="https://resume.crbaucom.com/files/rockwalldrive.mov"
+                  poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817169/crbaucom-images/driverock.jpg"
+                  src="https://res.cloudinary.com/crbaucom/video/upload/v1543817099/videos/rockwalldrive.mov"
                 >
                   <BigPlayButton position="center" />
                   <ControlBar autoHide={false}>

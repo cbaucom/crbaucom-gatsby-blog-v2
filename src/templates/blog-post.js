@@ -85,7 +85,7 @@ class BlogPostTemplate extends React.Component {
                 </span> */}
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-                <ul
+                {/* <ul
                   style={{
                     display: 'flex',
                     flexWrap: 'wrap',
@@ -116,7 +116,7 @@ class BlogPostTemplate extends React.Component {
                       </Link>
                     )}
                   </li>
-                </ul>
+                </ul> */}
 
                 {/*----- Share on twitter -----*/}
                 <aside className="meta">

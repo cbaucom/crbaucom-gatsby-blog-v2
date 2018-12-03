@@ -32,9 +32,13 @@ export default props => {
                   {node.frontmatter.cover_image.childImageSharp ? (
                     <Img
                       sizes={node.frontmatter.cover_image.childImageSharp.fluid}
+                      alt="Cover Image"
                     />
                   ) : (
-                    <img src={node.frontmatter.cover_image.publicURL} />
+                    <img
+                      src={node.frontmatter.cover_image.publicURL}
+                      alt="Cover Image"
+                    />
                   )}
                 </Link>
               </figure>
@@ -52,7 +56,11 @@ export default props => {
                     {node.frontmatter.section
                       ? links[node.frontmatter.section]
                       : 'Read article'}
-                    <img src={arrowRight} className="icon arrow right" />
+                    <img
+                      src={arrowRight}
+                      className="icon arrow right"
+                      alt="right arrow"
+                    />
                   </Link>
                   <span className="date">
                     {nicetime(currentDate, postDate)}

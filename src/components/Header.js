@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import Link from 'gatsby-link'
-import Logo from './icons/Logo';
-import Nav from './Nav';
+import { Link } from 'gatsby'
+import Logo from './icons/Logo'
+import Nav from './Nav'
 
 class Header extends Component {
-
   render() {
-    return(
+    return (
       <nav className="Header navbar navbar-default navbar-fixed-top">
         <Link to={'/'} className="logo">
           <Logo />
@@ -15,7 +14,6 @@ class Header extends Component {
       </nav>
     )
   }
-
 }
 
 export default Header

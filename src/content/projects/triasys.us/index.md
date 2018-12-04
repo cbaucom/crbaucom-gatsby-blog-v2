@@ -31,4 +31,4 @@ Recently, I've discovered the Laravel framework and really enjoy using it. Check
 
 ![Triasys website](ttc-mockup-cellworks.png)
 
-<p class="centered mt2"><a href="https://triasys.crbaucom.com" class="btn">Visit the live site</a></p>
+<p class="centered mt2"><a href="https://triasys.us" class="btn">Visit the live site</a></p>

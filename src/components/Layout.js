@@ -71,6 +71,13 @@ class Layout extends React.Component {
           <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
           <meta name="msapplication-TileColor" content="#94bae9" />
           <meta name="theme-color" content="#ffffff" />
+          <noscript>
+            {`
+            <div style="border: 1px solid purple; padding: 10px">
+              <span style="color:red">JavaScript is not enabled!</span>
+            </div>
+          `}
+          </noscript>
         </Helmet>
         <Header />
         <section className="App">{this.props.children}</section>

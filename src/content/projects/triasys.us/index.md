@@ -7,7 +7,7 @@ cover_image: './ttc-mockup-home.png'
 tags: ['design', 'development', 'php', 'mysql', 'javascript', 'laravel', 'rwd']
 ---
 
-#####TriaSys Technologies is a leading provider of innovative signal processing solutions for use in Signals Intelligence and Electronic Warfare applications.
+####TriaSys Technologies is a leading provider of innovative signal processing solutions for use in Signals Intelligence and Electronic Warfare applications.
 
 ![Triasys website](ttc-mockup-home.png)
 

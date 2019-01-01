@@ -1,7 +1,7 @@
 ---
 title: Resume Maker
 description: A tool to help you quickly whip up a resume
-date: '2017-01-21'
+date: '2016-01-21'
 section: project
 cover_image: './resumeMakerDesktop.jpg'
 tags: ['development', 'php', 'angular', 'javascript']

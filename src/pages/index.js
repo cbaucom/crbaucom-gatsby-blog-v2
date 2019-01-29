@@ -224,7 +224,7 @@ export const pageQuery = graphql`
     }
     blog: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      # limit: 3
+      limit: 3
       filter: { frontmatter: { section: { eq: "blog" } } }
     ) {
       totalCount
@@ -258,7 +258,7 @@ export const pageQuery = graphql`
     }
     projects: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 2
+      limit: 4
       filter: { frontmatter: { section: { eq: "project" } } }
     ) {
       totalCount

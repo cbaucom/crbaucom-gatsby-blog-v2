@@ -28,6 +28,6 @@ After entering all applicable sections, preview your resume by clicking the Fini
 
 ### The Result
 
-![Website mockup](resume-mockup-home.png)
+![Resume website mockup](resume-mockup-home.png)
 
 [Visit the live site](https://create-a-resume.builtbybaucom.com)

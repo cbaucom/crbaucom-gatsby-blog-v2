@@ -1,7 +1,7 @@
 ---
 title: Expensify
 description: An expense Tracking App
-date: '2018-12-29'
+date: '2018-11-13'
 section: project
 cover_image: './expensify-mockup.png'
 tags: ['javascript', 'react', 'redux', 'firebase']

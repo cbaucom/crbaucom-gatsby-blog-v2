@@ -7,7 +7,7 @@ cover_image: './memory-game.png'
 tags: ['javascript', 'games']
 ---
 
-<p><img src="./memory-game.png" alt="Cover Image" /></p>
+![Memory Game Picture](memory-game.png)
 
 ## How The Game Works
 
@@ -22,4 +22,4 @@ Each turn:
 
 The game ends once all cards have been correctly matched.
 
-<p class="centered mt2"><a href="https://cbaucom.github.io/fend-memory-game/" class="btn">Play the game</a></p>
+[Play the game](https://cbaucom.github.io/fend-memory-game/)

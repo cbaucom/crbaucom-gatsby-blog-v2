@@ -13,4 +13,4 @@ At Sit Play Rescue, they are avid dog lovers, trainers and rescue advocates. Not
 
 Built with [GatsbyJS](https://www.gatsbyjs.org/) and deployed on [Netlify](https://netlify.com/).
 
-<p class="centered mt2"><a href="https://sitplaylove.org/" class="btn">Visit the site!</a></p>
+[Visit the site](https://sitplaylove.org/)

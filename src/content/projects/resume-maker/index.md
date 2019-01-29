@@ -30,4 +30,4 @@ After entering all applicable sections, preview your resume by clicking the Fini
 
 ![Website mockup](resume-mockup-home.png)
 
-<p class="centered mt2 pb2"><a href="https://create-a-resume.builtbybaucom.com" class="btn">Visit the live site</a></p>
+[Visit the live site](https://create-a-resume.builtbybaucom.com)

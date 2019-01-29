@@ -15,4 +15,4 @@ Rachel and I got married so I made a website to share information with family an
 
 ![Wedding website](baucom-wedding-story.png)
 
-<p class="centered mt2"><a href="https://wedding.builtbybaucom.com" class="btn">Visit the live site</a></p>
+[Visit the live site](https://wedding.builtbybaucom.com)

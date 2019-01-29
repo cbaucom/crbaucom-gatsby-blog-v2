@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import get from 'lodash/get'
 import styled from 'styled-components'
 import {
@@ -10,15 +9,63 @@ import {
   PlaybackRateMenuButton,
 } from 'video-react'
 import Layout from '../components/Layout'
+import FrontpageHero from '../components/FrontpageHero'
 import Featured from '../components/Featured'
 import PostLoop from '../components/PostLoop'
 import Contact from '../components/Contact'
-import CrbaucomPortrait from '../assets/img/avatar-face-400px.png'
+import Icon from '../elements'
+import NodeIcon from '../assets/img/nodejs-black.png'
+import LaravelIcon from '../assets/img/laravel-text-logo.png'
 import '../assets/css/video-react.css'
 import '../assets/css/bootstrap-grid.css'
 
-const Title = styled.h3`
-  margin-bottom: 5px;
+const TechnologiesWrapper = styled.div`
+  background: #eee;
+  padding: 5rem 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  .content--wrapper {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  h1 {
+    font-weight: 600;
+  }
+  h3 {
+    font-weight: 500;
+  }
+  svg,
+  img {
+    margin: 1rem;
+    height: 100%;
+    align-self: center;
+  }
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 2.474rem;
+      margin-bottom: 2.5rem;
+    }
+    h3 {
+      font-size: 1.74rem;
+      font-weight: 500;
+    }
+  }
+  @media (max-width: 600px) {
+    padding: 3rem 1rem;
+    h1 {
+      font-size: 2.074rem;
+      margin-bottom: 1.5rem;
+    }
+    h3 {
+      font-size: 1.44rem;
+    }
+  }
+
+  .icon--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `
 class BlogIndex extends React.Component {
   constructor(props) {
@@ -44,9 +91,26 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <div className="Frontpage">
-          <div className=" Frontpage__about pt2">
+          <FrontpageHero />
+          <TechnologiesWrapper>
+            <div className="content--wrapper">
+              <h1>Freelance Web Developer and Designer</h1>
+              <h3>
+                Building progressive, responsive, mobile web apps with the best
+                technologies.
+              </h3>
+              <div className="icon--wrapper">
+                <Icon name="react-full" />
+                <Icon name="gatsby-full" />
+                <Icon name="graphql-full" />
+                <img src={NodeIcon} />
+                <img src={LaravelIcon} />
+              </div>
+            </div>
+          </TechnologiesWrapper>
+          {/* <div className=" Frontpage__about pt2">
             <div className="Frontpage__avatar col-sm-4">
-              <img src={CrbaucomPortrait} alt="my portrait" />
+              <Img fluid={data.file.childImageSharp.fluid} />
             </div>
             <div className="container Frontpage__about__blurb col-sm-8">
               <h1>Hello, world.</h1>
@@ -65,7 +129,7 @@ class BlogIndex extends React.Component {
                 websites!
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/*------- Projects loop -------*/}
           <div className="container pt3">
@@ -147,6 +211,17 @@ export const pageQuery = graphql`
         description
       }
     }
+    file(relativePath: { eq: "avatar-face-400px.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_tracedSVG
+          tracedSVG
+          aspectRatio
+          src
+          srcSet
+        }
+      }
+    }
     blog: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       # limit: 3
@@ -164,7 +239,11 @@ export const pageQuery = graphql`
               publicURL
               childImageSharp {
                 fluid(maxWidth: 1240) {
+                  tracedSVG
+                  aspectRatio
+                  src
                   srcSet
+                  sizes
                 }
               }
             }
@@ -194,7 +273,11 @@ export const pageQuery = graphql`
               publicURL
               childImageSharp {
                 fluid(maxWidth: 1240) {
+                  tracedSVG
+                  aspectRatio
+                  src
                   srcSet
+                  sizes
                 }
               }
             }

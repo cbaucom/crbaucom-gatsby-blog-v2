@@ -31,7 +31,7 @@ export default props => {
                 <Link to={node.fields.slug}>
                   {node.frontmatter.cover_image.childImageSharp ? (
                     <Img
-                      sizes={node.frontmatter.cover_image.childImageSharp.fluid}
+                      fluid={node.frontmatter.cover_image.childImageSharp.fluid}
                       alt="Cover Image"
                     />
                   ) : (

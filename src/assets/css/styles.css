@@ -1248,6 +1248,10 @@ ul.footer-nav {
   margin-top: -5rem;
 }
 
+.ArticlePage .markdown {
+  margin-top: 1rem;
+}
+
 .ArticlePage.project .meta {
   width: 100%;
   padding: 2rem;

@@ -83,7 +83,10 @@ class BlogPostTemplate extends React.Component {
                   Originally Posted:
                   {nicetime(currentDate, postDate)}
                 </span> */}
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div
+                  className="markdown"
+                  dangerouslySetInnerHTML={{ __html: post.html }}
+                />
 
                 {/* <ul
                   style={{
@@ -177,6 +180,8 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 1240) {
               tracedSVG
+              aspectRatio
+              sizes
               src
               srcSet
             }
@@ -208,6 +213,9 @@ export const pageQuery = graphql`
               publicURL
               childImageSharp {
                 fluid(maxWidth: 1240) {
+                  tracedSVG
+                  aspectRatio
+                  sizes
                   src
                   srcSet
                 }

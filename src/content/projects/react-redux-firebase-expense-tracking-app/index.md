@@ -1,6 +1,6 @@
 ---
-title: Expensify
-description: An expense Tracking App
+title: 'Expensify'
+description: 'An expense Tracking App'
 date: '2018-11-13'
 section: project
 cover_image: './expensify-mockup.png'

@@ -2,7 +2,7 @@
 title: 'Sit Play Rescue'
 description: 'Dog lovers, trainers and rescue advocates'
 date: '2018-07-11'
-section: 'project'
+section: project
 cover_image: './sitplaylove-mockup.png'
 tags: ['javascript', 'react', 'gatsbyjs', 'puppies']
 ---

@@ -1129,13 +1129,22 @@ ul.footer-nav {
 
 .Card .content {
   padding: 0.5rem 0.5rem 1rem 0.5rem;
-  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.Card .excerpt {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
+.Card .content h3 {
+  margin-bottom: 1rem;
+  justify-content: flex-start;
+}
+
+.Card .content .excerpt {
+  margin-bottom: 2rem;
   padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .Card .date,
@@ -1146,13 +1155,41 @@ ul.footer-nav {
   padding-right: 1rem;
 }
 
+.Card .content .meta {
+  justify-content: flex-end;
+}
+
 .Card .meta,
 .Featured .meta {
   position: absolute;
   bottom: 0;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0.5rem 0.8rem 0.5rem;
+}
+
+@media (max-width: 799px) {
+  .Card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .Card .content p {
+    font-size: 0.9rem;
+  }
+
+  .Card figure {
+    height: 200px;
+  }
+
+  .Card .content {
+    /* min-height: 160px; */
+  }
+}
+
+@media (min-width: 768px) {
+  .Card .content .excerpt {
+    min-height: 100px;
+  }
 }
 
 @media (min-width: 400px) {
@@ -1401,14 +1438,6 @@ ul.footer-nav {
   .ArticlePage .Cover {
     min-height: 200px;
     max-height: 200px;
-  }
-
-  .Card figure {
-    height: 230px;
-  }
-
-  .Card .content {
-    min-height: 100px;
   }
 
   .ArticlePage .Cover .gatsby-image-wrapper img {

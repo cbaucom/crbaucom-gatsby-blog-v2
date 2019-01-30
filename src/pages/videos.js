@@ -34,7 +34,7 @@ export default class Frontpage extends Component {
                 </Player>
                 <div className="content">
                   <h3 className="Title">
-                    Killington Facial.{' '}
+                    Skiing Killington.{' '}
                     <span className="muted">Personal Favorite.</span>
                   </h3>
                   <p className="excerpt">
@@ -222,27 +222,6 @@ export default class Frontpage extends Component {
                 <div className="content">
                   <h3 className="Title">Killington Bike Park</h3>
                   <p className="excerpt">Send it!</p>
-                </div>
-              </article>
-            </section>
-            <section className="col-md-6">
-              <article className="Card small">
-                <Player
-                  playsInline
-                  poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817170/crbaucom-images/drivetowork.jpg"
-                  src="https://res.cloudinary.com/crbaucom/video/upload/v1543817076/videos/drivetowork.webm"
-                >
-                  <BigPlayButton position="center" />
-                  <ControlBar autoHide={false}>
-                    <PlaybackRateMenuButton
-                      rates={[2, 1.5, 1.25, 1, 0.5, 0.25]}
-                      order={7.1}
-                    />
-                  </ControlBar>
-                </Player>
-                <div className="content">
-                  <h3 className="Title">Drive to work.</h3>
-                  <p className="excerpt">Boring!</p>
                 </div>
               </article>
             </section>

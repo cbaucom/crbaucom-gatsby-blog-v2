@@ -1,6 +1,6 @@
 ---
 title: Memory Game
-description:
+description: 'A simple game of memory'
 date: '2018-03-13'
 section: project
 cover_image: './memory-game.png'

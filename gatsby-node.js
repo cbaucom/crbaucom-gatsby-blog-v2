@@ -20,12 +20,17 @@ function createBlogPagination(graphql, createPage, resolve, reject) {
             id
             frontmatter {
               title
+              description
               date(formatString: "DD MMMM, YYYY")
               cover_image {
                 publicURL
                 childImageSharp {
                   fluid(maxWidth: 1240) {
+                    tracedSVG
+                    aspectRatio
+                    src
                     srcSet
+                    sizes
                   }
                 }
               }
@@ -67,12 +72,17 @@ function createProjectsPagination(graphql, createPage, resolve, reject) {
             id
             frontmatter {
               title
+              description
               date(formatString: "DD MMMM, YYYY")
               cover_image {
                 publicURL
                 childImageSharp {
                   fluid(maxWidth: 1240) {
+                    tracedSVG
+                    aspectRatio
+                    src
                     srcSet
+                    sizes
                   }
                 }
               }
@@ -117,12 +127,15 @@ exports.createPages = ({ graphql, actions }) => {
                   excerpt
                   frontmatter {
                     title
+                    description
                     cover_image {
                       childImageSharp {
                         fluid(maxWidth: 1240) {
                           tracedSVG
+                          aspectRatio
                           src
                           srcSet
+                          sizes
                         }
                       }
                     }

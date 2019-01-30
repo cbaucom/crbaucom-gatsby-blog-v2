@@ -1,6 +1,6 @@
 ---
 title: Transforming my storage shed into a man cave
-? description
+description: 'I turned my shed into a man cave'
 date: '2018-07-15'
 section: blog
 cover_image: './new-shed-backroom.jpg'

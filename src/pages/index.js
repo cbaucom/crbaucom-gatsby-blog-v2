@@ -20,7 +20,7 @@ import '../assets/css/video-react.css'
 import '../assets/css/bootstrap-grid.css'
 
 const TechnologiesWrapper = styled.div`
-  background: #eee;
+  background: #eee
   padding: 5rem 3rem;
   font-size: 1.5rem;
   text-align: center;

@@ -175,6 +175,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        description
         cover_image {
           publicURL
           childImageSharp {
@@ -209,6 +210,7 @@ export const pageQuery = graphql`
           html
           frontmatter {
             title
+            description
             cover_image {
               publicURL
               childImageSharp {

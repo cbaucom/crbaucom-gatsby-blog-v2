@@ -1,6 +1,6 @@
 ---
 title: My Visual Studio Code Setup
-description: Here are the settings for how I setup VS Code
+description: 'Here are the settings for how I setup VS Code'
 date: '2018-09-15'
 section: blog
 cover_image: './vscode-banner.jpg'

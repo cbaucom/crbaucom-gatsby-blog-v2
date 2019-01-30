@@ -1,6 +1,6 @@
 ---
 title: DIY Walkway
-? description
+description: 'I updated my walkway on the cheap'
 date: '2017-05-23'
 section: blog
 cover_image: './updated-walkway-cover.jpg'

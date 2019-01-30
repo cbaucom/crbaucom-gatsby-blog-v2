@@ -1,6 +1,6 @@
 ---
-title: Chris & Rachel Wedding Site
-description:
+title: 'Chris & Rachel Wedding Site'
+description: 'Wedding website for Chris and Rachel'
 date: '2016-06-01'
 section: project
 cover_image: './jh_engagement_jump_web2.jpg'

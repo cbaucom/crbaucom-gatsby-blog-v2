@@ -1,6 +1,6 @@
 ---
-title: TriaSys Technologies Website
-description: TriaSys Technologies is a leading provider of innovative signal processing solutions for use in Signals Intelligence and Electronic Warfare applications.
+title: 'TriaSys Technologies Website'
+description: 'TriaSys Technologies is a leading provider of innovative signal processing solutions for use in Signals Intelligence and Electronic Warfare applications.'
 date: '2018-05-01'
 section: project
 cover_image: './ttc-mockup-home.png'

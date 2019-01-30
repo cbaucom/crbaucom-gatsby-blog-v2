@@ -1,10 +1,10 @@
 ---
-title: Koozie Madness
-description: A full-stack online store built with React, Apollo, GraphQL, Prisma, and Stripe.
+title: 'Koozie Madness'
+description: 'A full-stack online store built with React, Apollo, GraphQL, Prisma, and Stripe.'
 date: '2018-12-02'
 section: project
 cover_image: './koozie-madness-mockup-stripe.png'
-tags: ['javascript', 'react']
+tags: ['javascript', 'react', 'graphql', 'apollo', 'stripe']
 ---
 
 ### A full-stack online store built with React, Apollo, GraphQL, Prisma, and Stripe.

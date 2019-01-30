@@ -1,6 +1,6 @@
 ---
 title: Arcade Game
-description:
+description: 'Classic arcade game'
 date: '2018-02-02'
 section: project
 cover_image: './arcade-game-mockup.png'

@@ -1,6 +1,6 @@
 ---
 title: Setting up your Mac for Laravel Development
-? description
+description: 'How to setup your Mac for Laravel Development'
 date: '2017-10-30'
 section: blog
 cover_image: './laravel-banner.png'

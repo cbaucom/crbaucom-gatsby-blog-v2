@@ -73,6 +73,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            description
             cover_image {
               publicURL
               childImageSharp {

@@ -1,6 +1,6 @@
 ---
 title: DIY Floating Shelves
-? description
+description: 'How to build your own floating shelves'
 date: '2018-08-08'
 section: blog
 cover_image: './final-shelf.jpg'

@@ -1,6 +1,6 @@
 ---
-title: Indecision
-description: A simple app that makes a decision for you based on given inputs
+title: 'Indecision'
+description: 'A simple app that makes a decision for you based on given inputs'
 date: '2018-10-28'
 section: project
 cover_image: './indecision-mockup2.png'

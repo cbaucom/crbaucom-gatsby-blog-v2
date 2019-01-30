@@ -1,6 +1,6 @@
 ---
 title: Update your Footer
-description: Change your timestamps from static to automatic
+description: 'Change your timestamps from static to automatic'
 date: '2018-12-31'
 section: blog
 cover_image: './2018-19.jpg'

@@ -4,8 +4,6 @@ import Link from 'gatsby-link'
 import '../assets/css/bootstrap-grid.css'
 
 export default () => {
-  const currentYear = new Date().getFullYear()
-
   return (
     <footer className="Footer">
       <div className="row">
@@ -62,7 +60,7 @@ export default () => {
             </li>
           </ul>
           <p className="centered">
-            &copy; {currentYear} Chris Baucom. All rights reserved.
+            &copy; {new Date().getFullYear()} Chris Baucom.
           </p>
         </div>
       </div>

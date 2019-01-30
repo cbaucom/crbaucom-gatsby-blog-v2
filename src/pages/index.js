@@ -20,11 +20,8 @@ import '../assets/css/video-react.css'
 import '../assets/css/bootstrap-grid.css'
 
 const TechnologiesWrapper = styled.div`
-  background: #eee;
-  /* background: linear-gradient(
-    rgba(214, 232, 255, 0.35),
-    rgba(255, 255, 255, 0.965)
-  ); */
+  /* background: #eee; */
+  background: linear-gradient(rgba(235, 235, 235, 0.9), rgba(255, 255, 255, 1));
   margin-top: -1rem;
   padding: 5rem 3rem;
   font-size: 1.5rem;

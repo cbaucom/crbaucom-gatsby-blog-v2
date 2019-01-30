@@ -893,13 +893,12 @@ a.Title:hover,
   padding: 0.75rem;
   position: relative;
   background: #94bae9;
-  /* background: #4B9CD3; */
   color: #ffffff;
-  box-shadow: 0px 1px 16px 5px rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0px 1px 16px 5px rgba(0, 0, 0, 0.08); */
   position: fixed;
   top: 0;
-  z-index: 710;
-  /* animation: 1s ease-out 0s 1 slideDownCover; */
+  z-index: 500;
+  /* animation: 0.5s ease-in 0s 1 slideDownCover; */
 }
 
 .Header .logo {
@@ -1486,8 +1485,8 @@ progress::-moz-progress-bar {
 
 /* ------- Frontpage ------- */
 
-.Frontpage .row {
-  /* margin: 2rem auto; */
+.Frontpage {
+  /* animation: 0.5s ease-in 0s 1 slideInFromBottom; */
 }
 
 .Featured + .container {

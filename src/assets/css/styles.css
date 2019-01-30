@@ -1593,17 +1593,33 @@ progress::-moz-progress-bar {
 .Frontpage__contact {
   background-color: #023767;
   color: #fff;
-  padding: 3rem 0;
+  padding: 5rem 0;
+  line-height: 2rem;
 }
 
 .Frontpage__contact p {
   color: #eee;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
+  font-weight: 100;
+  margin: 5rem 1rem;
 }
 
-.Frontpage__contact h2 img {
-  height: 2rem;
-  margin-left: 0.25rem;
+.Frontpage__contact p:last-child {
+  color: #eee;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 5rem 1rem 1rem 1rem;
+}
+
+.Frontpage__contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 600px) {
+  .Frontpage__contact h2 {
+    font-size: 2rem;
+  }
 }
 
 .Frontpage__contact p img {
@@ -1618,36 +1634,49 @@ progress::-moz-progress-bar {
   vertical-align: bottom;
 }
 
-.underline {
-  border-bottom: 0.1rem solid;
+.contact__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact__form .field {
+  margin-bottom: 2rem;
 }
 
 #contact .none {
   display: none;
 }
 
-/* contact form */
 #contact form {
   margin-top: 30px;
   margin-bottom: 30px;
+  width: 80%;
 }
-#contact label {
+.contact__form .field label {
   font: 24px/24px 'opensans-bold', sans-serif;
   margin: 12px 0;
   float: left;
   color: #ebeeee;
+  display: block;
 }
-#contact input,
-#contact textarea,
-#contact select {
-  padding: 18px 20px;
+.contact__form .field input,
+.contact__form .field textarea,
+.contact__form .field select {
+  display: block;
+  padding: 18px 10px;
   color: #023767;
   background: #eee;
   margin-bottom: 42px;
-  border: 0;
   outline: none;
   font-size: 24px;
   line-height: 24px;
+  border-color: #94bae9;
+  transition: color 0.3s linear, opacity 0.3s linear,
+    background-color 0.3s linear, border-color 0.3s linear;
+  appearance: none;
+  border-radius: 0;
+  width: 100%;
 }
 #contact input:focus,
 #contact textarea:focus,
@@ -1655,6 +1684,12 @@ progress::-moz-progress-bar {
   color: #fff;
   background-color: #94bae9;
 }
+
+.button__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 #contact button.submit {
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -1667,10 +1702,17 @@ progress::-moz-progress-bar {
   height: auto;
   display: inline-block;
   border-radius: 3px;
+  transition: all 0.7s ease-out;
 }
 #contact button.submit:hover {
   color: #0d0d0d;
   background: #fff;
+  transition: all 0.7s ease-in;
+}
+#contact a:hover {
+  color: #fff;
+  transition: all 0.7s ease-in;
+  text-decoration: underline;
 }
 #contact span.required {
   color: #11abb0;
@@ -1695,6 +1737,10 @@ progress::-moz-progress-bar {
 #message-warning i,
 #message-success i {
   margin-right: 10px;
+}
+
+.underline {
+  border-bottom: 0.1rem solid;
 }
 
 @media only screen and (max-width: 500px) {

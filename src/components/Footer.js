@@ -1,7 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
-import '../assets/css/bootstrap-grid.css'
+import {
+  FaEnvelope,
+  FaLinkedin,
+  FaGithubSquare,
+  FaInstagram,
+} from 'react-icons/fa'
 
 export default () => {
   return (
@@ -15,48 +19,37 @@ export default () => {
             <Link to={'/videos'}>Videos</Link>
           </ul>
           <ul className="social centered">
-            {/* <li>
-              <a href="/resume" className="fas fa-file-alt" />
-            </li> */}
             <li>
-              <a
-                title="email"
-                href="mailto:crbaucom@gmail.com"
-                target="blank"
-                className="fas fa-envelope"
-              />
+              <a title="email" href="mailto:crbaucom@gmail.com" target="blank">
+                <FaEnvelope />
+              </a>
             </li>
             <li>
               <a
                 title="linkedin"
                 href="https://www.linkedin.com/in/chrisbaucom"
                 target="blank"
-                className="fab fa-linkedin"
-              />
+              >
+                <FaLinkedin />
+              </a>
             </li>
             <li>
               <a
                 title="github"
                 href="https://github.com/cbaucom"
                 target="blank"
-                className="fab fa-github-square"
-              />
-            </li>
-            <li>
-              <a
-                title="facebook"
-                href="https://facebook.com/baucom"
-                target="blank"
-                className="fab fa-facebook-square"
-              />
+              >
+                <FaGithubSquare />
+              </a>
             </li>
             <li>
               <a
                 title="instagram"
                 href="https://instagram.com/chrisbaucom"
                 target="blank"
-                className="fab fa-instagram"
-              />
+              >
+                <FaInstagram />
+              </a>
             </li>
           </ul>
           <p className="centered">

@@ -1599,20 +1599,20 @@ progress::-moz-progress-bar {
 
 .Frontpage__contact p {
   color: #eee;
-  font-size: 1.35rem;
+  font-size: 1.65rem;
   font-weight: 100;
   margin: 5rem 1rem;
 }
 
 .Frontpage__contact p:last-child {
   color: #eee;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 900;
   margin: 5rem 1rem 1rem 1rem;
 }
 
 .Frontpage__contact h2 {
-  font-size: 2.5rem;
+  font-size: 2.95rem;
   margin-bottom: 3rem;
 }
 

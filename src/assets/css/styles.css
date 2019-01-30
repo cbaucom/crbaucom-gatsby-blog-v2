@@ -828,7 +828,7 @@ a.Title:hover,
 .Link .icon {
   width: 13px;
   height: 13px;
-  margin-bottom: -0.05rem;
+  margin-bottom: -0.15rem;
   margin-left: 0.25rem;
 }
 
@@ -1135,7 +1135,7 @@ ul.footer-nav {
 
 .Card .excerpt {
   margin-top: 1rem;
-  margin-bottom: 0;
+  margin-bottom: 3rem;
   padding-left: 0.5rem;
 }
 
@@ -1367,6 +1367,10 @@ ul.footer-nav {
   padding: 2rem 0 3rem 0;
 }
 
+.RelatedPosts .container.row {
+  max-width: 100%;
+}
+
 .ArticlePage .TagCloud ul {
   margin: 0;
 }
@@ -1401,7 +1405,7 @@ ul.footer-nav {
   }
 
   .Card figure {
-    height: 150px;
+    height: 230px;
   }
 
   .Card .content {

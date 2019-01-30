@@ -188,7 +188,7 @@ export const pageQuery = graphql`
             }
           }
         }
-        date(formatString: "DD MMMM, YYYY")
+        date(formatString: "MMMM DD, YYYY")
         tags
         section
       }
@@ -223,7 +223,7 @@ export const pageQuery = graphql`
                 }
               }
             }
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             tags
           }
           fields {

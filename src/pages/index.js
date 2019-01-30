@@ -108,28 +108,6 @@ class BlogIndex extends React.Component {
               </div>
             </div>
           </TechnologiesWrapper>
-          {/* <div className=" Frontpage__about pt2">
-            <div className="Frontpage__avatar col-sm-4">
-              <Img fluid={data.file.childImageSharp.fluid} />
-            </div>
-            <div className="container Frontpage__about__blurb col-sm-8">
-              <h1>Hello, world.</h1>
-              <p>
-                My name is Chris. I'm a 30-something-year-old{' '}
-                <strong>engineer</strong> and <strong>web developer</strong>{' '}
-                from Texas. I'm have been living in Boston for the past 11
-                years. I bleed{' '}
-                <a
-                  className="hover"
-                  href="https://goheels.com/documents/2018/9/13/2018_19_UNC_M_Basketball_Schedule.pdf"
-                >
-                  Carolina Blue
-                </a>
-                . I love skiing, photography, listening to music, and making
-                websites!
-              </p>
-            </div>
-          </div> */}
 
           {/*------- Projects loop -------*/}
           <div className="container pt3">
@@ -184,10 +162,9 @@ class BlogIndex extends React.Component {
           <div className="container pt3">
             <h2 className="Title text blue">Latest posts</h2>
           </div>
-          <Featured post={blog.edges[0].node} />
 
           {/*------- Posts loop -------*/}
-          <PostLoop loop={blog.edges} skip={skip} />
+          <PostLoop loop={blog.edges} />
           <div className="container centered pb2">
             <Link to={'blog'} className="btn">
               Check out other blog posts
@@ -211,17 +188,6 @@ export const pageQuery = graphql`
         description
       }
     }
-    file(relativePath: { eq: "avatar-face-400px.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_tracedSVG
-          tracedSVG
-          aspectRatio
-          src
-          srcSet
-        }
-      }
-    }
     blog: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 3
@@ -234,7 +200,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             description
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             cover_image {
               publicURL
               childImageSharp {
@@ -268,7 +234,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             description
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             cover_image {
               publicURL
               childImageSharp {

@@ -49,7 +49,7 @@ export default props => {
                 >
                   <h3 className="Title">{node.frontmatter.title}</h3>
                 </Link>
-                {/* <p className="excerpt">{node.frontmatter.description}</p> */}
+                <p className="excerpt">{node.frontmatter.description}</p>
 
                 <aside className="meta">
                   <Link to={node.fields.slug} className="Link">

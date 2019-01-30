@@ -36,4 +36,4 @@ handlePick = () => {
 
 To see the full source, click [here](https://github.com/cbaucom/react-indecision-app) and you can visit the live site [here](https://indecision.builtbybaucom.com)
 
-![Indecision App Mockup](./indecision-mockup.png)
+![Indecision App Mockup](indecision-mockup.png)

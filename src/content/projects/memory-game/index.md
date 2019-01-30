@@ -1,5 +1,5 @@
 ---
-title: Memory Game
+title: 'Memory Game'
 description: 'A simple game of memory'
 date: '2018-03-13'
 section: project

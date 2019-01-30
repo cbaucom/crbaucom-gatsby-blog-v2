@@ -1,5 +1,5 @@
 ---
-title: Arcade Game
+title: 'Arcade Game'
 description: 'Classic arcade game'
 date: '2018-02-02'
 section: project

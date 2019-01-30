@@ -24,9 +24,15 @@ For example, on this site I do something similar to the following...
 ```javascript
 const currentYear = new Date().getFullYear()
 
-<p className="centered">
-  &copy; {currentYear} Chris Baucom. All rights reserved.
+<p>
+  &copy; {currentYear} Chris Baucom.
 </p>
+```
+
+You can even simplify it to just the one line...
+
+```javascript
+<p>&copy; {new Date().getFullYear()} Chris Baucom.</p>
 ```
 
 ### PHP

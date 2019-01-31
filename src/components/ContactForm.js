@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const ContactFormWrapper = styled.div`
@@ -62,71 +62,65 @@ const ButtonWrapper = styled.div`
   justify-content: center;
 `
 
-export default class ContactForm extends Component {
-  constructor(props) {
-    super(props)
-  }
+const ContactForm = () => (
+  <ContactFormWrapper>
+    <form
+      id="contact"
+      method="POST"
+      action="https://formspree.io/crbaucom@gmail.com"
+    >
+      <div className="field">
+        <label htmlFor="name">
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+          />
+        </label>
+      </div>
+      <div className="field">
+        <label htmlFor="email">
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+        </label>
+      </div>
+      <div className="field">
+        <label htmlFor="phone">
+          <input
+            id="phone"
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            required
+          />
+        </label>
+      </div>
+      <div className="field">
+        <label htmlFor="message">
+          <textarea
+            id="message"
+            rows="4"
+            type="text"
+            name="message"
+            placeholder="Message"
+            required
+          />
+        </label>
+      </div>
+      <ButtonWrapper>
+        <button className="submit" type="submit">
+          Send
+        </button>
+      </ButtonWrapper>
+    </form>
+  </ContactFormWrapper>
+)
 
-  render() {
-    return (
-      <ContactFormWrapper>
-        <form
-          id="contact"
-          method="POST"
-          action="https://formspree.io/crbaucom@gmail.com"
-        >
-          <div className="field">
-            <label htmlFor="name">
-              <input
-                id="name"
-                type="text"
-                name="name"
-                placeholder="Name"
-                required
-              />
-            </label>
-          </div>
-          <div className="field">
-            <label htmlFor="email">
-              <input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-              />
-            </label>
-          </div>
-          <div className="field">
-            <label htmlFor="phone">
-              <input
-                id="phone"
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                required
-              />
-            </label>
-          </div>
-          <div className="field">
-            <label htmlFor="message">
-              <textarea
-                id="message"
-                rows="4"
-                type="text"
-                name="message"
-                placeholder="Message"
-                required
-              />
-            </label>
-          </div>
-          <ButtonWrapper>
-            <button className="submit" type="submit">
-              Send
-            </button>
-          </ButtonWrapper>
-        </form>
-      </ContactFormWrapper>
-    )
-  }
-}
+export default ContactForm

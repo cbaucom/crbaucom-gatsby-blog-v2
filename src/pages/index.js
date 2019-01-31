@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/Layout'
@@ -35,7 +35,7 @@ class IndexPage extends Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <div>
+        <div className="Frontpage">
           <FrontpageHero />
           <FrontpageHeroBlurb />
 

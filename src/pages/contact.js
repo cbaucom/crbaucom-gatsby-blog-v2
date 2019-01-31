@@ -15,7 +15,6 @@ const ContactHero = styled.div`
   top: 0;
   left: 0;
   height: 100vh;
-  max-height: 1080px;
   width: 100%;
   box-sizing: border-box;
   padding: 4em 2em;
@@ -64,39 +63,37 @@ const FormWrapper = styled.div`
   padding: 5rem 1rem;
 `
 
-const ContactPage = ({ ...props }) => {
-  const focusMethod = function getFocus() {
-    document.getElementById('name').focus()
-  }
-
-  return (
-    <Layout location={props.location}>
-      <ContactPageWrapper>
-        <ContactHero>
-          <div className="container">
-            <h1>Let's work together 🤝</h1>
-            <div className="blurb">
-              <p>Have a question or looking to get started with a project?</p>
-              <p>Contact me below and let's schedule 15 - 30 min to chat!</p>
-            </div>
-          </div>
-          <ScrollLink
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={1000}
-            onClick={focusMethod}
-          >
-            <DownArrowWrapper />
-          </ScrollLink>
-        </ContactHero>
-        <FormWrapper>
-          <Contact />
-        </FormWrapper>
-      </ContactPageWrapper>
-    </Layout>
-  )
+const focusMethod = function getFocus() {
+  document.getElementById('name').focus()
 }
+
+const ContactPage = ({ ...props }) => (
+  <Layout location={props.location}>
+    <ContactPageWrapper>
+      <ContactHero>
+        <div className="container">
+          <h1>Let's work together 🤝</h1>
+          <div className="blurb">
+            <p>Have a question or looking to get started with a project?</p>
+            <p>Contact me below and let's schedule 15 - 30 min to chat!</p>
+          </div>
+        </div>
+        <ScrollLink
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={1000}
+          onClick={focusMethod}
+        >
+          <DownArrowWrapper />
+        </ScrollLink>
+      </ContactHero>
+      <FormWrapper>
+        <Contact />
+      </FormWrapper>
+    </ContactPageWrapper>
+  </Layout>
+)
 
 export default ContactPage

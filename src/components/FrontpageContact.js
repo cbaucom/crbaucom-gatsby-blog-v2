@@ -43,7 +43,7 @@ const FrontpageContactWrapper = styled.div`
 `
 
 const FrontpageContact = () => (
-  <FrontpageContactWrapper>
+  <FrontpageContactWrapper id="contact">
     <div className="container centered">
       <h2 className="text">Let's build something together!</h2>
       <p>Need help with your project?</p>

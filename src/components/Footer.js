@@ -69,7 +69,7 @@ export default () => {
             <Link to={'/blog'}>Blog</Link>
             <Link to={'/contact'}>Contact</Link>
           </ul>
-          <ul className="social centered">
+          {/* <ul className="social centered">
             <li>
               <a title="email" href="mailto:crbaucom@gmail.com" target="blank">
                 <FaEnvelope />
@@ -102,7 +102,7 @@ export default () => {
                 <FaInstagram />
               </a>
             </li>
-          </ul>
+          </ul> */}
           <p className="centered">
             &copy; {new Date().getFullYear()} Chris Baucom.
           </p>

@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { Link, graphql, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 
 // Components
+import Layout from '../components/Layout'
 import PostLoop from '../components/PostLoop'
 
 const Tags = ({ pageContext, data }) => {
@@ -14,7 +15,7 @@ const Tags = ({ pageContext, data }) => {
   } tagged with `
 
   return (
-    <div>
+    <Layout>
       <header>
         <h1 className="container Title">
           #<span className="text blue">{tag}</span>{' '}
@@ -23,16 +24,13 @@ const Tags = ({ pageContext, data }) => {
       </header>
 
       <PostLoop loop={edges} skip={skip} />
-      {/*
-              This links to a page that does not yet exist.
-              We'll come back to it!
-            */}
+
       <nav className="centered pb2">
         <Link to="/tags" className="btn">
           All tags
         </Link>
       </nav>
-    </div>
+    </Layout>
   )
 }
 
@@ -59,37 +57,40 @@ Tags.propTypes = {
   }),
 }
 
-export default Tags
-
-export const pageQuery = graphql`
-  query TagPage($tag: String) {
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          frontmatter {
-            title
-            description
-            cover_image {
-              publicURL
-              childImageSharp {
-                fluid(maxWidth: 1240) {
-                  srcSet
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query TagPage($tag: String) {
+        allMarkdownRemark(
+          limit: 2000
+          sort: { fields: [frontmatter___date], order: DESC }
+          filter: { frontmatter: { tags: { in: [$tag] } } }
+        ) {
+          totalCount
+          edges {
+            node {
+              frontmatter {
+                title
+                description
+                cover_image {
+                  publicURL
+                  childImageSharp {
+                    fluid(maxWidth: 1240) {
+                      srcSet
+                    }
+                  }
                 }
+                date
               }
+              fields {
+                slug
+              }
+              excerpt
             }
-            date
           }
-          fields {
-            slug
-          }
-          excerpt
         }
       }
-    }
-  }
-`
+    `}
+    render={data => <Tags data={data} {...props} />}
+  />
+)

@@ -10,6 +10,8 @@ class Header extends Component {
   }
 
   render() {
+    const { location } = this.props
+
     return (
       <nav className="Header navbar navbar-default navbar-fixed-top">
         {(location.pathname === '/' && (

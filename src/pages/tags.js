@@ -1,29 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
 
 // Utilities
 import kebabCase from 'lodash/kebabCase'
 
 // Components
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
-import { StaticQuery } from 'gatsby'
-
-const TAGS_QUERY = graphql`
-  query TagsQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(limit: 2000) {
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
-    }
-  }
-`
+import Layout from '../components/Layout'
 
 const TagsPage = ({
   data: {
@@ -33,28 +17,23 @@ const TagsPage = ({
     },
   },
 }) => (
-  <StaticQuery
-    query={TAGS_QUERY}
-    render={data => (
-      <div>
-        <Helmet title={title} />
-        <section className="TagList">
-          <h1 className="container Title">Tags</h1>
-          <nav className="container TagCloud large">
-            <ul>
-              {group.map(tag => (
-                <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </section>
-      </div>
-    )}
-  />
+  <Layout>
+    <Helmet title={title} />
+    <section className="TagList">
+      <h1 className="container Title">Tags</h1>
+      <nav className="container TagCloud large">
+        <ul>
+          {group.map(tag => (
+            <li key={tag.fieldValue}>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                {tag.fieldValue} ({tag.totalCount})
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </section>
+  </Layout>
 )
 
 TagsPage.propTypes = {
@@ -76,3 +55,19 @@ TagsPage.propTypes = {
 }
 
 export default TagsPage
+
+export const pageQuery = graphql`
+  query TagsQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(limit: 2000) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
+    }
+  }
+`

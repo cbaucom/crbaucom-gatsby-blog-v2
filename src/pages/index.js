@@ -35,36 +35,38 @@ class IndexPage extends Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <FrontpageHero />
-        <FrontpageHeroBlurb />
+        <div>
+          <FrontpageHero />
+          <FrontpageHeroBlurb />
 
-        {/*------- Projects loop -------*/}
-        <div className="container pt3">
-          <h2 className="Title text blue">Latest projects</h2>
+          {/*------- Projects loop -------*/}
+          <div className="container pt3">
+            <h2 className="Title text blue">Latest projects</h2>
+          </div>
+          <PostLoop loop={projects.edges} skip={!skip} />
+          <div className="container centered pb2">
+            <Link to={'projects'} className="btn">
+              See more projects
+            </Link>
+          </div>
+
+          <FrontpageVideo />
+
+          {/*------- Featured image -------*/}
+          <div className="container pt3">
+            <h2 className="Title text blue">Latest posts</h2>
+          </div>
+
+          {/*------- Posts loop -------*/}
+          <PostLoop loop={blog.edges} />
+          <div className="container centered pb2">
+            <Link to={'blog'} className="btn">
+              Check out other blog posts
+            </Link>
+          </div>
+
+          <FrontpageContact />
         </div>
-        <PostLoop loop={projects.edges} skip={!skip} />
-        <div className="container centered pb2">
-          <Link to={'projects'} className="btn">
-            See more projects
-          </Link>
-        </div>
-
-        <FrontpageVideo />
-
-        {/*------- Featured image -------*/}
-        <div className="container pt3">
-          <h2 className="Title text blue">Latest posts</h2>
-        </div>
-
-        {/*------- Posts loop -------*/}
-        <PostLoop loop={blog.edges} />
-        <div className="container centered pb2">
-          <Link to={'blog'} className="btn">
-            Check out other blog posts
-          </Link>
-        </div>
-
-        <FrontpageContact />
       </Layout>
     )
   }

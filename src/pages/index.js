@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
+import React, { Component } from 'react'
+import { Link, graphql, StaticQuery } from 'gatsby'
 import get from 'lodash/get'
 import styled from 'styled-components'
 import {
@@ -10,7 +10,6 @@ import {
 } from 'video-react'
 import Layout from '../components/Layout'
 import FrontpageHero from '../components/FrontpageHero'
-import Featured from '../components/Featured'
 import PostLoop from '../components/PostLoop'
 import Contact from '../components/ContactForm'
 import Icon from '../elements'
@@ -69,7 +68,7 @@ const TechnologiesWrapper = styled.div`
     justify-content: center;
   }
 `
-class BlogIndex extends React.Component {
+class IndexPage extends Component {
   constructor(props) {
     super(props)
 
@@ -197,82 +196,85 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-    blog: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 3
-      filter: { frontmatter: { section: { eq: "blog" } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
             title
             description
-            date(formatString: "MMMM DD, YYYY")
-            cover_image {
-              publicURL
-              childImageSharp {
-                fluid(maxWidth: 1240) {
-                  tracedSVG
-                  aspectRatio
-                  src
-                  srcSet
-                  sizes
-                }
-              }
-            }
-            section
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-    projects: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 4
-      filter: { frontmatter: { section: { eq: "project" } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            description
-            date(formatString: "MMMM DD, YYYY")
-            cover_image {
-              publicURL
-              childImageSharp {
-                fluid(maxWidth: 1240) {
-                  tracedSVG
-                  aspectRatio
-                  src
-                  srcSet
-                  sizes
-                }
-              }
-            }
-            section
-          }
-          fields {
-            slug
           }
         }
+        blog: allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 3
+          filter: { frontmatter: { section: { eq: "blog" } } }
+        ) {
+          totalCount
+          edges {
+            node {
+              id
+              frontmatter {
+                title
+                description
+                date(formatString: "MMMM DD, YYYY")
+                cover_image {
+                  publicURL
+                  childImageSharp {
+                    fluid(maxWidth: 1240) {
+                      tracedSVG
+                      aspectRatio
+                      src
+                      srcSet
+                      sizes
+                    }
+                  }
+                }
+                section
+              }
+              fields {
+                slug
+              }
+              excerpt
+            }
+          }
+        }
+        projects: allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 4
+          filter: { frontmatter: { section: { eq: "project" } } }
+        ) {
+          totalCount
+          edges {
+            node {
+              id
+              frontmatter {
+                title
+                description
+                date(formatString: "MMMM DD, YYYY")
+                cover_image {
+                  publicURL
+                  childImageSharp {
+                    fluid(maxWidth: 1240) {
+                      tracedSVG
+                      aspectRatio
+                      src
+                      srcSet
+                      sizes
+                    }
+                  }
+                }
+                section
+              }
+              fields {
+                slug
+              }
+            }
+          }
+        }
       }
-    }
-  }
-`
+    `}
+    render={data => <IndexPage data={data} {...props} />}
+  />
+)

@@ -929,8 +929,9 @@ a.Title:hover,
     padding-left: 15px;
   }
 
+  .BlogArchive .container,
   .BlogArchive .container.row {
-    max-width: 100%;
+    max-width: 1080px;
   }
 }
 
@@ -1663,84 +1664,12 @@ progress::-moz-progress-bar {
   vertical-align: bottom;
 }
 
-.contact__form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.contact__form .field {
-  margin-bottom: 2rem;
-}
-
-#contact .none {
-  display: none;
-}
-
-#contact form {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 80%;
-}
-.contact__form .field label {
-  font: 24px/24px 'opensans-bold', sans-serif;
-  margin: 12px 0;
-  float: left;
-  color: #ebeeee;
-  display: block;
-}
-.contact__form .field input,
-.contact__form .field textarea,
-.contact__form .field select {
-  display: block;
-  padding: 18px 10px;
-  color: #023767;
-  background: #eee;
-  margin-bottom: 42px;
-  outline: none;
-  font-size: 24px;
-  line-height: 24px;
-  border-color: #94bae9;
-  transition: color 0.3s linear, opacity 0.3s linear,
-    background-color 0.3s linear, border-color 0.3s linear;
-  appearance: none;
-  border-radius: 0;
-  width: 100%;
-}
-#contact input:focus,
-#contact textarea:focus,
-#contact select:focus {
-  color: #fff;
-  background-color: #94bae9;
-}
-
-.button__wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-#contact button.submit {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 1.25rem;
-  padding: 1.25rem;
-  color: #fff;
-  background: #94bae9;
-  border: none;
-  cursor: pointer;
-  height: auto;
-  display: inline-block;
-  border-radius: 3px;
-  transition: all 0.7s ease-out;
-}
-#contact button.submit:hover {
-  color: #0d0d0d;
-  background: #fff;
-  transition: all 0.7s ease-in;
+#contact a {
+  transition: all 0.3s ease-out;
 }
 #contact a:hover {
   color: #fff;
-  transition: all 0.7s ease-in;
+  transition: all 0.3s ease-in;
   text-decoration: underline;
 }
 #contact span.required {

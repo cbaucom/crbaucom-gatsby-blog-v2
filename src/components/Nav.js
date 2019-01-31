@@ -11,7 +11,7 @@ const Nav = () => (
         <Link to={'/blog'}>Blog</Link>
       </li>
       <li>
-        <Link to={'/videos'}>Videos</Link>
+        <Link to={'/contact'}>Contact</Link>
       </li>
     </ul>
   </nav>

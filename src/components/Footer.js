@@ -16,7 +16,7 @@ export default () => {
             <Link to={'/'}>Home</Link>
             <Link to={'/projects'}>Projects</Link>
             <Link to={'/blog'}>Blog</Link>
-            <Link to={'/videos'}>Videos</Link>
+            <Link to={'/contact'}>Contact</Link>
           </ul>
           <ul className="social centered">
             <li>

@@ -12,7 +12,7 @@ import Layout from '../components/Layout'
 import FrontpageHero from '../components/FrontpageHero'
 import Featured from '../components/Featured'
 import PostLoop from '../components/PostLoop'
-import Contact from '../components/Contact'
+import Contact from '../components/ContactForm'
 import Icon from '../elements'
 import NodeIcon from '../assets/img/nodejs-black.png'
 import LaravelIcon from '../assets/img/laravel-text-logo.png'
@@ -173,7 +173,24 @@ class BlogIndex extends React.Component {
             </Link>
           </div>
 
-          <Contact />
+          {/*------- Contact Section -------*/}
+          <div id="contact" className="Frontpage__contact">
+            <div className="container centered">
+              <h2 className="text">Let's build something together!</h2>
+              <p>Need help with your project?</p>
+              <p>
+                Is your Wordpress site slow and bogged down with plugins and you
+                can't wait to migrate to{' '}
+                <a href="https://gatsbyjs.org">Gatsby?</a>
+              </p>
+              <p>
+                Looking to build a progressive web app that works offline and
+                looks great on desktops, tablets, and phones?
+              </p>
+              <p>Contact me and let's discuss how we can make it happen!</p>
+            </div>
+            <Contact />
+          </div>
         </div>
       </Layout>
     )

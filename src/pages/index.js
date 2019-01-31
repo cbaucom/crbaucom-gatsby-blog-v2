@@ -70,85 +70,82 @@ class IndexPage extends Component {
   }
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+    blog: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 3
+      filter: { frontmatter: { section: { eq: "blog" } } }
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
             title
             description
-          }
-        }
-        blog: allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 3
-          filter: { frontmatter: { section: { eq: "blog" } } }
-        ) {
-          totalCount
-          edges {
-            node {
-              id
-              frontmatter {
-                title
-                description
-                date(formatString: "MMMM DD, YYYY")
-                cover_image {
-                  publicURL
-                  childImageSharp {
-                    fluid(maxWidth: 1240) {
-                      tracedSVG
-                      aspectRatio
-                      src
-                      srcSet
-                      sizes
-                    }
-                  }
+            date(formatString: "MMMM DD, YYYY")
+            cover_image {
+              publicURL
+              childImageSharp {
+                fluid(maxWidth: 1240) {
+                  tracedSVG
+                  aspectRatio
+                  src
+                  srcSet
+                  sizes
                 }
-                section
-              }
-              fields {
-                slug
-              }
-              excerpt
-            }
-          }
-        }
-        projects: allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 4
-          filter: { frontmatter: { section: { eq: "project" } } }
-        ) {
-          totalCount
-          edges {
-            node {
-              id
-              frontmatter {
-                title
-                description
-                date(formatString: "MMMM DD, YYYY")
-                cover_image {
-                  publicURL
-                  childImageSharp {
-                    fluid(maxWidth: 1240) {
-                      tracedSVG
-                      aspectRatio
-                      src
-                      srcSet
-                      sizes
-                    }
-                  }
-                }
-                section
-              }
-              fields {
-                slug
               }
             }
+            section
+          }
+          fields {
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+    projects: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 4
+      filter: { frontmatter: { section: { eq: "project" } } }
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            description
+            date(formatString: "MMMM DD, YYYY")
+            cover_image {
+              publicURL
+              childImageSharp {
+                fluid(maxWidth: 1240) {
+                  tracedSVG
+                  aspectRatio
+                  src
+                  srcSet
+                  sizes
+                }
+              }
+            }
+            section
+          }
+          fields {
+            slug
           }
         }
       }
-    `}
-    render={data => <IndexPage data={data} {...props} />}
-  />
-)
+    }
+  }
+`
+
+export default IndexPage

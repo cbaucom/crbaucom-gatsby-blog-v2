@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
 // Components
@@ -57,40 +57,37 @@ Tags.propTypes = {
   }),
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query TagPage($tag: String) {
-        allMarkdownRemark(
-          limit: 2000
-          sort: { fields: [frontmatter___date], order: DESC }
-          filter: { frontmatter: { tags: { in: [$tag] } } }
-        ) {
-          totalCount
-          edges {
-            node {
-              frontmatter {
-                title
-                description
-                cover_image {
-                  publicURL
-                  childImageSharp {
-                    fluid(maxWidth: 1240) {
-                      srcSet
-                    }
-                  }
+export const query = graphql`
+  query TagPage($tag: String) {
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
+    ) {
+      totalCount
+      edges {
+        node {
+          frontmatter {
+            title
+            description
+            cover_image {
+              publicURL
+              childImageSharp {
+                fluid(maxWidth: 1240) {
+                  srcSet
                 }
-                date
               }
-              fields {
-                slug
-              }
-              excerpt
             }
+            date
           }
+          fields {
+            slug
+          }
+          excerpt
         }
       }
-    `}
-    render={data => <Tags data={data} {...props} />}
-  />
-)
+    }
+  }
+`
+
+export default Tags

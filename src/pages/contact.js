@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 
@@ -65,41 +64,39 @@ const FormWrapper = styled.div`
   padding: 5rem 1rem;
 `
 
-class ContactPage extends React.Component {
-  focusMethod = function getFocus() {
+const ContactPage = ({ ...props }) => {
+  const focusMethod = function getFocus() {
     document.getElementById('name').focus()
   }
 
-  render() {
-    return (
-      <Layout location={this.props.location}>
-        <ContactPageWrapper>
-          <ContactHero>
-            <div className="container">
-              <h1>Let's work together 🤝</h1>
-              <div className="blurb">
-                <p>Have a question or looking to get started with a project?</p>
-                <p>Contact me below and let's schedule 15 - 30 min to chat!</p>
-              </div>
+  return (
+    <Layout location={props.location}>
+      <ContactPageWrapper>
+        <ContactHero>
+          <div className="container">
+            <h1>Let's work together 🤝</h1>
+            <div className="blurb">
+              <p>Have a question or looking to get started with a project?</p>
+              <p>Contact me below and let's schedule 15 - 30 min to chat!</p>
             </div>
-            <ScrollLink
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={1000}
-              onClick={this.focusMethod}
-            >
-              <DownArrowWrapper />
-            </ScrollLink>
-          </ContactHero>
-          <FormWrapper>
-            <Contact />
-          </FormWrapper>
-        </ContactPageWrapper>
-      </Layout>
-    )
-  }
+          </div>
+          <ScrollLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={1000}
+            onClick={focusMethod}
+          >
+            <DownArrowWrapper />
+          </ScrollLink>
+        </ContactHero>
+        <FormWrapper>
+          <Contact />
+        </FormWrapper>
+      </ContactPageWrapper>
+    </Layout>
+  )
 }
 
 export default ContactPage

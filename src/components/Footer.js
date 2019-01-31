@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
 import {
   FaEnvelope,
   FaLinkedin,
@@ -7,9 +8,59 @@ import {
   FaInstagram,
 } from 'react-icons/fa'
 
+const FooterWrapper = styled.footer`
+  padding: 20px;
+  font-size: 1.3em;
+  background: #94bae9;
+  p {
+    font-size: 0.7em;
+    margin-bottom: 0.2rem;
+  }
+  .footer-nav a:hover,
+  .social li a:hover {
+    border-bottom: 1px solid;
+  }
+
+  ul.social,
+  ul.footer-nav {
+    padding-left: 0;
+    margin-bottom: 0.2rem;
+    font-size: 1.35rem;
+  }
+
+  .social li,
+  .footer-nav a {
+    display: inline-block;
+    padding: 0.1rem 0.5rem 0 0.5rem;
+  }
+
+  .footer-nav a,
+  .social li a {
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.85;
+  }
+
+  @media (max-width: 767px) {
+    footer {
+      padding: 0px;
+      font-size: 1.2em;
+    }
+    footer p {
+      margin: 0;
+    }
+    ul.social {
+      margin-bottom: 0;
+    }
+    .footer-nav a {
+      font-size: 1em;
+    }
+  }
+`
+
 export default () => {
   return (
-    <footer className="Footer">
+    <FooterWrapper>
       <div className="row">
         <div className="col-md-6 col-md-offset-3">
           <ul className="footer-nav centered">
@@ -57,6 +108,6 @@ export default () => {
           </p>
         </div>
       </div>
-    </footer>
+    </FooterWrapper>
   )
 }

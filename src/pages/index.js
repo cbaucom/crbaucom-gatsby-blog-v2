@@ -1,73 +1,17 @@
 import React, { Component } from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import get from 'lodash/get'
-import styled from 'styled-components'
-import {
-  Player,
-  BigPlayButton,
-  ControlBar,
-  PlaybackRateMenuButton,
-} from 'video-react'
+
 import Layout from '../components/Layout'
 import FrontpageHero from '../components/FrontpageHero'
+import FrontpageHeroBlurb from '../components/FrontpageHeroBlurb'
+import FrontpageVideo from '../components/FrontpageVideo'
 import PostLoop from '../components/PostLoop'
-import Contact from '../components/ContactForm'
-import Icon from '../elements'
-import NodeIcon from '../assets/img/nodejs-black.png'
-import LaravelIcon from '../assets/img/laravel-text-logo.png'
+import FrontpageContact from '../components/FrontpageContact'
+
 import '../assets/css/video-react.css'
 import '../assets/css/bootstrap-grid.css'
 
-const TechnologiesWrapper = styled.div`
-  /* background: #eee; */
-  background: linear-gradient(rgba(235, 235, 235, 0.9), rgba(255, 255, 255, 1));
-  margin-top: -1rem;
-  padding: 5rem 3rem;
-  font-size: 1.5rem;
-  text-align: center;
-  .content--wrapper {
-    width: 90vw;
-    margin: 0 auto;
-  }
-  h1 {
-    font-weight: 600;
-  }
-  h3 {
-    font-weight: 500;
-  }
-  svg,
-  img {
-    margin: 1rem;
-    height: 100%;
-    align-self: center;
-  }
-  @media (max-width: 900px) {
-    h1 {
-      font-size: 2.474rem;
-      margin-bottom: 2.5rem;
-    }
-    h3 {
-      font-size: 1.74rem;
-      font-weight: 500;
-    }
-  }
-  @media (max-width: 600px) {
-    padding: 3rem 1rem;
-    h1 {
-      font-size: 2.074rem;
-      margin-bottom: 1.5rem;
-    }
-    h3 {
-      font-size: 1.44rem;
-    }
-  }
-
-  .icon--wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-`
 class IndexPage extends Component {
   constructor(props) {
     super(props)
@@ -91,106 +35,36 @@ class IndexPage extends Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <div className="Frontpage">
-          <FrontpageHero />
-          <TechnologiesWrapper>
-            <div className="content--wrapper">
-              <h1>Freelance Web Developer and Designer</h1>
-              <h3>
-                Building progressive, responsive, mobile web apps with the best
-                technologies.
-              </h3>
-              <div className="icon--wrapper">
-                <Icon name="react-full" />
-                <Icon name="gatsby-full" />
-                <Icon name="graphql-full" />
-                <img src={NodeIcon} />
-                <img src={LaravelIcon} />
-              </div>
-            </div>
-          </TechnologiesWrapper>
+        <FrontpageHero />
+        <FrontpageHeroBlurb />
 
-          {/*------- Projects loop -------*/}
-          <div className="container pt3">
-            <h2 className="Title text blue">Latest projects</h2>
-          </div>
-          <PostLoop loop={projects.edges} skip={!skip} />
-          <div className="container centered pb2">
-            <Link to={'projects'} className="btn">
-              See more projects
-            </Link>
-          </div>
-
-          <div className="Frontpage__video">
-            <div className="stripe-container">
-              <div className="stripe" />
-            </div>
-            <div className="container">
-              <div className="video-section">
-                <h2 className="Title text blue">Videos</h2>
-
-                <div className="row">
-                  <div className="col-md-9 vertical-center">
-                    <Player
-                      playsInline
-                      poster="https://res.cloudinary.com/crbaucom/image/upload/v1543817179/crbaucom-images/sprayAnna.jpg"
-                      src="https://res.cloudinary.com/crbaucom/video/upload/v1543816933/videos/sprayAnnaKillington.mp4"
-                    >
-                      <BigPlayButton position="center" />
-                      <ControlBar autoHide={false}>
-                        <PlaybackRateMenuButton
-                          rates={[2, 1.5, 1.25, 1, 0.5, 0.25]}
-                          order={7.1}
-                        />
-                      </ControlBar>
-                    </Player>
-                  </div>
-                  <div className="col-md-3 vertical-center">
-                    <p className="lead">
-                      I like to mess around with Final Cut Pro from time to
-                      time. This one is my all-time favorite!
-                    </p>
-                    <Link to={'videos'} className="btn">
-                      View more videos
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/*------- Featured image -------*/}
-          <div className="container pt3">
-            <h2 className="Title text blue">Latest posts</h2>
-          </div>
-
-          {/*------- Posts loop -------*/}
-          <PostLoop loop={blog.edges} />
-          <div className="container centered pb2">
-            <Link to={'blog'} className="btn">
-              Check out other blog posts
-            </Link>
-          </div>
-
-          {/*------- Contact Section -------*/}
-          <div id="contact" className="Frontpage__contact">
-            <div className="container centered">
-              <h2 className="text">Let's build something together!</h2>
-              <p>Need help with your project?</p>
-              <p>
-                Is your Wordpress site slow and bogged down with plugins and you
-                can't wait to migrate to{' '}
-                <a href="https://gatsbyjs.org">Gatsby?</a>
-              </p>
-              <p>
-                Looking to build a progressive web app that works offline and
-                looks great on desktops, tablets, and phones?
-              </p>
-              <p>Contact me and let's discuss how we can make it happen!</p>
-            </div>
-            <Contact />
-          </div>
+        {/*------- Projects loop -------*/}
+        <div className="container pt3">
+          <h2 className="Title text blue">Latest projects</h2>
         </div>
+        <PostLoop loop={projects.edges} skip={!skip} />
+        <div className="container centered pb2">
+          <Link to={'projects'} className="btn">
+            See more projects
+          </Link>
+        </div>
+
+        <FrontpageVideo />
+
+        {/*------- Featured image -------*/}
+        <div className="container pt3">
+          <h2 className="Title text blue">Latest posts</h2>
+        </div>
+
+        {/*------- Posts loop -------*/}
+        <PostLoop loop={blog.edges} />
+        <div className="container centered pb2">
+          <Link to={'blog'} className="btn">
+            Check out other blog posts
+          </Link>
+        </div>
+
+        <FrontpageContact />
       </Layout>
     )
   }

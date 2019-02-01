@@ -67,8 +67,8 @@ const focusMethod = function getFocus() {
   document.getElementById('name').focus()
 }
 
-const ContactPage = ({ ...props }) => (
-  <Layout location={props.location}>
+const ContactPage = ({ location }) => (
+  <Layout location={location}>
     <ContactPageWrapper>
       <ContactHero>
         <div className="container">

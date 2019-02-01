@@ -21,15 +21,15 @@ I personally have a lot of language and framework specific extensions installed 
 
 I'm a big [Wes Bos](https://wesbos.com/) fan and have been using his [Cobalt2 Theme](https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2) for a while now. It has almost 117,000 installs at the time of this writing! Make sure you follow the instructions, especially the CSS Hacks, for best experience.
 
-![VSCode screen](vscode-screen.png)
+![VSCode screen](https://res.cloudinary.com/crbaucom/image/upload/v1549036068/crbaucom-images/vscode-screen.png)
 
 ### Custom Settings
 
 To modify the default settings, navigate to `Code > Preferences > Settings` or press `CMD + ,`. You should see something similar to the screen shot below. If not, you may need to click on the three little dots on the right and then select 'Open settings.json'.
 
-![VSCode open settings](vscode-settings.jpg)
+![VSCode open settings](https://res.cloudinary.com/crbaucom/image/upload/v1549036068/crbaucom-images/vscode-settings.jpg)
 
-![VSCode settings](vscode-banner.jpg)
+![VSCode settings](https://res.cloudinary.com/crbaucom/image/upload/v1549036068/crbaucom-images/vscode-banner.jpg)
 
 Here is how my settings.json file looks
 

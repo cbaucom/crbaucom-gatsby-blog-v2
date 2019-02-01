@@ -20,14 +20,14 @@ Resume Maker provides a simple solution to creating a resume.
 
 Begin by entering in your basic information. You can leave fields and sections blank if they don't apply to you.
 
-![Resume maker gif](basic_resume2.gif)
+![Resume maker gif](https://res.cloudinary.com/crbaucom/image/upload/v1549036879/crbaucom-images/basic_resume2.gif)
 
 After entering all applicable sections, preview your resume by clicking the Finish tab. Drag and drop to arrange the sections how you would like and then you can save to PDF.
 
-![Resume maker gif](finish_resume.gif)
+![Resume maker gif](https://res.cloudinary.com/crbaucom/image/upload/v1549036879/crbaucom-images/finish_resume.gif)
 
 ### The Result
 
-![Resume website mockup](resume-mockup-home.png)
+![Resume website mockup](https://res.cloudinary.com/crbaucom/image/upload/v1549036879/crbaucom-images/resume-mockup-home.png)
 
 [Visit the live site](https://create-a-resume.builtbybaucom.com)

@@ -15,13 +15,13 @@ export default props => {
 
   if (props.loop !== undefined) {
     postLoop = props.loop
-      .filter(({ node }) => {
-        if (props.skip === true) {
-          return props.loop[0].node !== node
-        } else {
-          return node
-        }
-      })
+      // .filter(({ node }) => {
+      //   if (props.skip === true) {
+      //     return props.loop[0].node !== node
+      //   } else {
+      //     return node
+      //   }
+      // })
       .map(({ node }) => {
         let postDate = new Date(node.frontmatter.date)
         return (

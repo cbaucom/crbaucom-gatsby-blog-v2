@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
+import { graphql } from 'gatsby'
 
 // Utilities
 import kebabCase from 'lodash/kebabCase'
@@ -16,8 +17,9 @@ const TagsPage = ({
       siteMetadata: { title },
     },
   },
+  location,
 }) => (
-  <Layout>
+  <Layout location={location}>
     <Helmet title={title} />
     <section className="TagList">
       <h1 className="container Title">Tags</h1>

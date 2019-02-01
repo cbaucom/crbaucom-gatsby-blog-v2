@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import capitalizeFirstLetter from '../helpers/uppercase'
 import PostLoop from '../components/PostLoop'
 import Layout from '../components/Layout'
@@ -17,22 +17,24 @@ const NavLink = props => {
 }
 
 const IndexPage = ({ data, pageContext }) => {
-  const { group, index, first, last, pageCount, pathPrefix } = pageContext
+  const { pageNumber, pageCount, pathPrefix } = pageContext
   const previousUrl =
-    index - 1 == 1
+    pageNumber - 1 == 0
       ? '/' + pathPrefix + '/'
-      : '/' + pathPrefix + '/' + (index - 1).toString()
-  const nextUrl = '/' + pathPrefix + '/' + (index + 1).toString()
+      : '/' + pathPrefix + '/' + pageNumber.toString()
+  const nextUrl = '/' + pathPrefix + '/' + (pageNumber + 2).toString()
+  const first = pageNumber === 0
+  const last = pageNumber === pageCount - 1
 
   return (
     <Layout>
       <div className="BlogArchive">
         <header className="container Title">
           <h1>{capitalizeFirstLetter(pathPrefix)} archive</h1>
-          <h4 className="Title__sub">Page {index}</h4>
+          <h4 className="Title__sub">Page {pageNumber + 1}</h4>
         </header>
 
-        <PostLoop loop={group} />
+        <PostLoop loop={data.allMarkdownRemark.edges} />
 
         <nav className="Pagination container">
           <div className="prev">
@@ -47,3 +49,36 @@ const IndexPage = ({ data, pageContext }) => {
   )
 }
 export default IndexPage
+
+export const blogListQuery = graphql`
+  query blogListQuery($skip: Int!, $limit: Int!, $section: String!) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: $limit
+      skip: $skip
+      filter: { frontmatter: { section: { eq: $section } } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            description
+            date(formatString: "DD MMMM, YYYY")
+            cover_image {
+              publicURL
+              childImageSharp {
+                fluid(maxWidth: 1240) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+            section
+          }
+        }
+      }
+    }
+  }
+`

@@ -2,111 +2,6 @@ const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
-const createPaginatedPages = require('gatsby-paginate')
-
-/**
- *  Pagination for /blog/ page
- */
-function createBlogPagination(graphql, createPage, resolve, reject) {
-  graphql(`
-    {
-      allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { section: { eq: "blog" } } }
-      ) {
-        totalCount
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              description
-              date(formatString: "DD MMMM, YYYY")
-              cover_image {
-                publicURL
-                childImageSharp {
-                  fluid(maxWidth: 1240) {
-                    tracedSVG
-                    aspectRatio
-                    src
-                    srcSet
-                    sizes
-                  }
-                }
-              }
-              section
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `).then(result => {
-    createPaginatedPages({
-      edges: result.data.allMarkdownRemark.edges,
-      createPage: createPage,
-      pageTemplate: 'src/templates/blog-archive.js',
-      pageLength: 4,
-      pathPrefix: 'blog',
-      buildPath: (index, pathPrefix) =>
-        index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`, // This is optional and this is the default
-    })
-  })
-}
-
-/**
- *  Pagination for /projects/ page
- */
-function createProjectsPagination(graphql, createPage, resolve, reject) {
-  graphql(`
-    {
-      allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { section: { eq: "project" } } }
-      ) {
-        totalCount
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              description
-              date(formatString: "DD MMMM, YYYY")
-              cover_image {
-                publicURL
-                childImageSharp {
-                  fluid(maxWidth: 1240) {
-                    tracedSVG
-                    aspectRatio
-                    src
-                    srcSet
-                    sizes
-                  }
-                }
-              }
-              section
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `).then(result => {
-    createPaginatedPages({
-      edges: result.data.allMarkdownRemark.edges,
-      createPage: createPage,
-      pageTemplate: 'src/templates/blog-archive.js',
-      pageLength: 4,
-      pathPrefix: 'projects',
-      buildPath: (index, pathPrefix) =>
-        index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`, // This is optional and this is the default
-    })
-  })
-}
 
 /**
  *  Create slug pages for markdown files
@@ -124,22 +19,8 @@ exports.createPages = ({ graphql, actions }) => {
             allMarkdownRemark {
               edges {
                 node {
-                  excerpt
                   frontmatter {
-                    title
-                    description
-                    cover_image {
-                      childImageSharp {
-                        fluid(maxWidth: 1240) {
-                          tracedSVG
-                          aspectRatio
-                          src
-                          srcSet
-                          sizes
-                        }
-                      }
-                    }
-                    date(formatString: "DD MMMM, YYYY")
+                    section
                     tags
                   }
                   fields {
@@ -156,6 +37,9 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
+        let blogCount = 0
+        let projectCount = 0
+
         // Create blog posts pages based on slugs.
         const posts = result.data.allMarkdownRemark.edges
 
@@ -170,6 +54,12 @@ exports.createPages = ({ graphql, actions }) => {
               Math.floor(Math.random() * post.node.frontmatter.tags.length)
             ]
 
+          if (post.node.frontmatter.section === 'project') {
+            projectCount++
+          } else if (post.node.frontmatter.section === 'blog') {
+            blogCount++
+          }
+
           createPage({
             path: post.node.fields.slug,
             component: blogPost,
@@ -178,6 +68,39 @@ exports.createPages = ({ graphql, actions }) => {
               tag: tag,
               previous,
               next,
+            },
+          })
+        })
+
+        const postsPerPage = 4
+        const numBlogPages = Math.ceil(blogCount / postsPerPage)
+        const numProjectPages = Math.ceil(projectCount / postsPerPage)
+        Array.from({ length: numBlogPages }).forEach((_, i) => {
+          createPage({
+            path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+            component: path.resolve('./src/templates/blog-archive.js'),
+            context: {
+              limit: postsPerPage,
+              skip: i * postsPerPage,
+              pageNumber: i,
+              pageCount: numBlogPages,
+              pathPrefix: 'blog',
+              section: 'blog',
+            },
+          })
+        })
+
+        Array.from({ length: numProjectPages }).forEach((_, i) => {
+          createPage({
+            path: i === 0 ? `/projects` : `/projects/${i + 1}`,
+            component: path.resolve('./src/templates/blog-archive.js'),
+            context: {
+              limit: postsPerPage,
+              skip: i * postsPerPage,
+              pageNumber: i,
+              pageCount: numProjectPages,
+              pathPrefix: 'projects',
+              section: 'project',
             },
           })
         })
@@ -217,9 +140,9 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         resolve()
-      }),
-      createBlogPagination(graphql, createPage),
-      createProjectsPagination(graphql, createPage)
+      })
+      // createBlogPagination(graphql, createPage),
+      // createProjectsPagination(graphql, createPage)
     )
   })
 }

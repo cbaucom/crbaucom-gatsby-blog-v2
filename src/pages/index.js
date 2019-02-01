@@ -97,11 +97,7 @@ export const query = graphql`
               publicURL
               childImageSharp {
                 fluid(maxWidth: 1240) {
-                  tracedSVG
-                  aspectRatio
-                  src
-                  srcSet
-                  sizes
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }
@@ -131,11 +127,7 @@ export const query = graphql`
               publicURL
               childImageSharp {
                 fluid(maxWidth: 1240) {
-                  tracedSVG
-                  aspectRatio
-                  src
-                  srcSet
-                  sizes
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }

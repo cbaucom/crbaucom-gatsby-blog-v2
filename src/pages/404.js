@@ -21,8 +21,8 @@ const BieberWrapper = styled.div`
   }
 `
 
-const NotFoundPage = () => (
-  <Layout>
+const NotFoundPage = ({ location }) => (
+  <Layout location={location}>
     <BieberWrapper>
       <div className="sorry">
         <h5>Looks like this page is missing.</h5>

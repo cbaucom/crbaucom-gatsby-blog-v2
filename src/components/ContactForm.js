@@ -76,7 +76,7 @@ const ContactForm = () => (
             type="text"
             name="name"
             placeholder="Name"
-            autocomplete="name"
+            autoComplete="name"
             required
           />
         </label>
@@ -88,7 +88,7 @@ const ContactForm = () => (
             type="email"
             name="email"
             placeholder="Email"
-            autocomplete="email"
+            autoComplete="email"
             required
           />
         </label>
@@ -100,7 +100,7 @@ const ContactForm = () => (
             type="tel"
             name="phone"
             placeholder="Phone Number"
-            autocomplete="tel"
+            autoComplete="tel"
             required
           />
         </label>

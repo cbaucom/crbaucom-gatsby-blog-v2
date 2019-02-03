@@ -59,7 +59,7 @@ const TechnologiesWrapper = styled.div`
 const FrontpageHeroBlurb = () => (
   <TechnologiesWrapper>
     <div className="content--wrapper">
-      <h1>Freelance Web Developer and Designer</h1>
+      <h1>Freelance Web Developer</h1>
       <h3>
         Building progressive, responsive, mobile web apps with the best
         technologies.

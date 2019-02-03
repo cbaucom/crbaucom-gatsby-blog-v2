@@ -9,9 +9,6 @@ import FrontpageVideo from '../components/FrontpageVideo'
 import PostLoop from '../components/PostLoop'
 import FrontpageContact from '../components/FrontpageContact'
 
-import '../assets/css/video-react.css'
-import '../assets/css/bootstrap-grid.css'
-
 class IndexPage extends Component {
   constructor(props) {
     super(props)
@@ -36,6 +33,7 @@ class IndexPage extends Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <div className="Frontpage">
+          {/*------- Main Image and Blurb -------*/}
           <FrontpageHero />
           <FrontpageHeroBlurb />
 

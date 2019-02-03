@@ -5,6 +5,8 @@ import { createGlobalStyle } from 'styled-components'
 import config from '../config'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import '../assets/css/video-react.css'
+import '../assets/css/bootstrap-grid.css'
 import '../assets/css/styles.css'
 
 import appleTouchIcon from '../../static/assets/favicon/apple-touch-icon.png'

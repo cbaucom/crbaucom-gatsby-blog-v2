@@ -79,10 +79,11 @@ const ContactPage = ({ location }) => (
           </div>
         </div>
         <ScrollLink
+          activeClass="active"
           to="contact"
           spy={true}
           smooth={true}
-          offset={-70}
+          offset={-100}
           duration={1000}
           onClick={focusMethod}
         >

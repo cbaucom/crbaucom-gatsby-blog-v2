@@ -141,8 +141,6 @@ exports.createPages = ({ graphql, actions }) => {
 
         resolve()
       })
-      // createBlogPagination(graphql, createPage),
-      // createProjectsPagination(graphql, createPage)
     )
   })
 }

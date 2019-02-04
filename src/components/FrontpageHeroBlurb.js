@@ -68,8 +68,8 @@ const FrontpageHeroBlurb = () => (
         <Icon name="react-full" />
         <Icon name="gatsby-full" />
         <Icon name="graphql-full" />
-        <img src={NodeIcon} />
-        <img src={LaravelIcon} />
+        <img src={NodeIcon} alt="Node Icon" />
+        <img src={LaravelIcon} alt="Laravel Icon" />
       </div>
     </div>
   </TechnologiesWrapper>

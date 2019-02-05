@@ -11,34 +11,38 @@ import {
 const FooterWrapper = styled.footer`
   padding: 20px;
   font-size: 1.3em;
-  background: #94bae9;
+  background: #023767;
   p {
     font-size: 0.7em;
     margin-bottom: 0.2rem;
-  }
-  .footer-nav a:hover,
-  .social li a:hover {
-    border-bottom: 1px solid;
+    color: #fff;
   }
 
   ul.social,
   ul.footer-nav {
-    padding-left: 0;
     margin-bottom: 0.2rem;
     font-size: 1.35rem;
   }
 
   .social li,
-  .footer-nav a {
+  .footer-nav li {
     display: inline-block;
     padding: 0.1rem 0.5rem 0 0.5rem;
   }
 
-  .footer-nav a,
+  .footer-nav li a,
   .social li a {
     color: #fff;
     font-weight: 500;
     line-height: 1.85;
+    padding: 5px 2px;
+    transition: color 400ms ease-in;
+  }
+  .footer-nav a:hover,
+  .social li a:hover {
+    color: #94bae9;
+    /* border-bottom: 1px solid; */
+    transition: color 400ms ease-in;
   }
 
   @media (max-width: 767px) {
@@ -62,21 +66,35 @@ export default () => {
   return (
     <FooterWrapper>
       <div className="row">
-        <div className="col-md-6 col-md-offset-3">
+        <div className="">
           <ul className="footer-nav centered">
-            <Link to={'/'}>Home</Link>
-            <Link to={'/projects'}>Projects</Link>
-            <Link to={'/blog'}>Blog</Link>
-            <Link to={'/contact'}>Contact</Link>
+            <li>
+              <Link to={'/'}>Home</Link>
+            </li>
+            <li>
+              <Link to={'/projects'}>Projects</Link>
+            </li>
+            <li>
+              <Link to={'/blog'}>Blog</Link>
+            </li>
+            <li>
+              <Link to={'/contact'}>Contact</Link>
+            </li>
           </ul>
           <ul className="social centered">
             <li>
-              <a title="email" href="mailto:crbaucom@gmail.com" target="blank">
+              <a
+                className="email"
+                title="email"
+                href="mailto:crbaucom@gmail.com"
+                target="blank"
+              >
                 <FaEnvelope />
               </a>
             </li>
             <li>
               <a
+                className="linkedin"
                 title="linkedin"
                 href="https://www.linkedin.com/in/chrisbaucom"
                 target="blank"
@@ -86,6 +104,7 @@ export default () => {
             </li>
             <li>
               <a
+                className="github"
                 title="github"
                 href="https://github.com/cbaucom"
                 target="blank"
@@ -95,6 +114,7 @@ export default () => {
             </li>
             <li>
               <a
+                className="instagram"
                 title="instagram"
                 href="https://instagram.com/chrisbaucom"
                 target="blank"

@@ -37,10 +37,10 @@ const ContactFormWrapper = styled.div`
     width: 100%;
   }
   button.submit {
-    background: #94bae9;
+    background: #fff;
     border: none;
     border-radius: 3px;
-    color: #fff;
+    color: #023767;
     cursor: pointer;
     display: inline-block;
     height: auto;
@@ -51,8 +51,8 @@ const ContactFormWrapper = styled.div`
     transition: all 0.7s ease-out;
   }
   button.submit:hover {
-    color: #0d0d0d;
-    background: #fff;
+    color: #fff;
+    background: #94bae9;
     transition: all 0.7s ease-in;
   }
 `
@@ -70,52 +70,56 @@ const ContactForm = () => (
       action="https://formspree.io/crbaucom@gmail.com"
     >
       <div className="field">
-        <label htmlFor="name">
-          <input
-            id="name"
-            type="text"
-            name="name"
-            placeholder="Name"
-            autoComplete="name"
-            required
-          />
+        <label htmlFor="name" aria-labelledby="name">
+          Name
         </label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Name"
+          autoComplete="name"
+          required
+        />
       </div>
       <div className="field">
-        <label htmlFor="email">
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="Email"
-            autoComplete="email"
-            required
-          />
+        <label htmlFor="email" aria-labelledby="email">
+          Email
         </label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Email"
+          autoComplete="email"
+          required
+        />
       </div>
       <div className="field">
-        <label htmlFor="phone">
-          <input
-            id="phone"
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            autoComplete="tel"
-            required
-          />
+        <label htmlFor="phone" aria-labelledby="phone">
+          Phone
         </label>
+        <input
+          id="phone"
+          type="tel"
+          name="phone"
+          placeholder="Phone Number"
+          autoComplete="tel"
+          required
+        />
       </div>
       <div className="field">
-        <label htmlFor="message">
-          <textarea
-            id="message"
-            rows="4"
-            type="text"
-            name="message"
-            placeholder="Message"
-            required
-          />
+        <label htmlFor="message" aria-labelledby="message">
+          Message
         </label>
+        <textarea
+          id="message"
+          rows="4"
+          type="text"
+          name="message"
+          placeholder="Message"
+          required
+        />
       </div>
       <ButtonWrapper>
         <button className="submit" type="submit">

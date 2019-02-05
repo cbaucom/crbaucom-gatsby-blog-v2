@@ -902,7 +902,7 @@ a.Title:hover,
   height: 3.5rem;
   padding: 0.75rem;
   position: relative;
-  background: #94bae9;
+  background: #023767;
   color: #ffffff;
   /* box-shadow: 0px 1px 16px 5px rgba(0, 0, 0, 0.08); */
   position: fixed;
@@ -981,17 +981,17 @@ a.Title:hover,
 .Header .Navigation a:hover,
 a .Title:hover,
 a.Title:hover {
-  color: #023767;
+  color: #94bae9;
   transition: color 400ms ease-out;
 }
 
 .Header .logo svg path {
-  fill: #023767;
+  fill: #94bae9;
   transition: fill 400ms ease-in;
 }
 
 .Header .logo:hover svg path {
-  fill: #023767;
+  fill: #fff;
   transition: fill 400ms ease-out;
 }
 

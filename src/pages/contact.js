@@ -60,6 +60,7 @@ const DownArrowWrapper = styled.div`
 
 const FormWrapper = styled.div`
   background: #023767;
+  color: #fff;
   padding: 5rem 1rem;
 `
 

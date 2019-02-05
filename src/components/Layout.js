@@ -49,6 +49,7 @@ createGlobalStyle`
 const Layout = ({ children, location }) => (
   <div>
     <Helmet>
+      <html lang="en" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
       <title>{config.title}</title>

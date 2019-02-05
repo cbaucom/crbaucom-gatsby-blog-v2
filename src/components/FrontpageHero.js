@@ -7,7 +7,7 @@ import bg from '../assets/img/pattern-eee-sm.png'
 const HeroWrapper = styled.div`
   justify-content: center;
   background: linear-gradient(
-      rgba(148,186,233,1),
+      rgba(2,55,103,1),
       rgba(255, 255, 255, 0.0165)
     ),
     url(${bg}) center;

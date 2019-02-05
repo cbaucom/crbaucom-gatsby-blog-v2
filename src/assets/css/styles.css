@@ -1223,6 +1223,20 @@ a.Title:hover {
   /* animation: 400ms ease-in 0s 1 fadeIn; */
 }
 
+.ArticlePage a {
+  color: #023767;
+  font-weight: bold;
+  box-shadow: rgb(148, 186, 233) 0px -2px 0px 0px inset;
+  margin: 0 0.15rem;
+  border-bottom: 1px solid rgb(148, 186, 233);
+  transition: background-color 400ms ease-in;
+}
+
+.ArticlePage a:hover {
+  background: #94bae9;
+  transition: background-color 400ms ease-in;
+}
+
 .ArticlePage .Cover {
   max-height: 400px;
   z-index: 10;

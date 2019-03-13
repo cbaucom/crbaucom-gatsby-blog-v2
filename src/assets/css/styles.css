@@ -1181,6 +1181,7 @@ a.Title:hover {
 .TagCloud li a {
   color: #fff;
   border-bottom: 0;
+  font-weight: 100;
 }
 
 .TagCloud li:hover {

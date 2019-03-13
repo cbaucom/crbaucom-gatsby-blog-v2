@@ -145,8 +145,6 @@ class BlogPostTemplate extends React.Component {
             </section>
           </article>
 
-          {post.frontmatter.section === 'blog' && <Comments post={post} />}
-
           {related ? (
             <nav className="RelatedPosts container">
               <h3 className="Title">Related Articles</h3>

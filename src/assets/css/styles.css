@@ -229,6 +229,8 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
   -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
@@ -956,6 +958,7 @@ a.Title:hover,
   margin-top: -0.6rem;
   font-size: 1.15rem;
   float: right;
+  line-height: initial;
 }
 
 .Header .Navigation ul {

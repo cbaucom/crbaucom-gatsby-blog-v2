@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import config from '../config'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -46,8 +46,15 @@ createGlobalStyle`
   }
   button {  font-family: 'Lato'; }
 `
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`
+
 const Layout = ({ children, location }) => (
-  <div>
+  <Wrapper>
     <Helmet>
       <html lang="en" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -66,7 +73,7 @@ const Layout = ({ children, location }) => (
     <Header location={location} />
     <section className="App">{children}</section>
     <Footer />
-  </div>
+  </Wrapper>
 )
 
 Layout.propTypes = {

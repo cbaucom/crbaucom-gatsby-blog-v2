@@ -897,6 +897,7 @@ a.Title:hover,
 
 .App {
   margin-top: 3.5rem;
+  flex-grow: 1;
 }
 
 .Header {

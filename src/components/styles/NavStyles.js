@@ -14,19 +14,18 @@ const NavStyles = styled.div`
   li {
     display: inline;
     letter-spacing: 0.1rem;
-    /* margin: 0 1rem; */
     font-weight: 400;
     font-size: 1.25rem;
   }
   a,
   button {
-		color: white;
+    color: white;
     padding: 1rem 1rem;
     display: flex;
     align-items: center;
     position: relative;
-		text-transform: uppercase;
-		text-shadow: none;
+    text-transform: uppercase;
+    text-shadow: none;
     font-size: 1em;
     background: none;
     border: 0;
@@ -35,12 +34,6 @@ const NavStyles = styled.div`
       font-size: 0.75rem;
       padding: 16px 10px;
     }
-  }
-  @media (max-width: 1300px) {
-    /* border-top: 1px solid ${props => props.theme.lightgrey}; */
-    /* width: 100%;
-    justify-content: center; */
-    /* font-size: 1.5rem; */
   }
 `
 

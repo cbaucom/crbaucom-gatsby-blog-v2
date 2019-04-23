@@ -2,8 +2,9 @@ module.exports = {
   siteMetadata: {
     title: 'Chris Baucom Portfolio',
     author: 'Chris Baucom',
-    description: 'The portfolio and blog of Chris Baucom.',
-    siteUrl: 'https://crbaucom.com/',
+    description:
+      'Chris Baucom is a freelance web developer available for hire. This is his portfolio. Built with React, Gatsby, GraphQL, Netlify, Styled Components, JavaScript and Love.',
+    siteUrl: 'https://chrisbaucom.dev/',
   },
   plugins: [
     {

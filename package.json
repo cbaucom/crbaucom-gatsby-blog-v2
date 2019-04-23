@@ -7,6 +7,7 @@
     "url": "https://github.com/cbaucom/crbaucom-gatsby-blog-v2/issues"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "babel-plugin-styled-components": "^1.10.0",
     "core-js": "^2.6.3",
     "disqus-react": "^1.0.5",
@@ -16,6 +17,7 @@
     "gatsby-plugin-feed": "^2.0.12",
     "gatsby-plugin-google-analytics": "^2.0.12",
     "gatsby-plugin-manifest": "^2.0.15",
+    "gatsby-plugin-netlify": "^2.0.14",
     "gatsby-plugin-offline": "^2.0.22",
     "gatsby-plugin-react-helmet": "^3.0.5",
     "gatsby-plugin-sharp": "^2.0.19",

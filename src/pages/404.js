@@ -12,7 +12,7 @@ const BieberWrapper = styled.div`
   background-position: center center;
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: calc(100vh - 10em);
   .sorry {
     padding: 0.5rem 2rem;
     h5 {

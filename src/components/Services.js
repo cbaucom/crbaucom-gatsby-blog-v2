@@ -13,16 +13,21 @@ AOS.init()
 const ServicesWrapper = styled.section`
   margin: 0 auto;
   width: 100vw;
-  padding: 5rem 0 1rem;
+  padding: 2rem 0 1rem;
   p {
     font-size: 1.35rem;
-    line-height: 1.4;
+    line-height: 1.5;
+  }
+  @media (min-width: 767px) {
+    p {
+      font-size: 1.5rem;
+    }
   }
 `
 
 const SpeedWrapper = styled.section`
   width: 100%;
-  background: linear-gradient(rgba(255, 218, 86, 0.7), rgba(255, 147, 86, 0.75)),
+  background: linear-gradient(rgba(255, 255, 46, 0.7), rgba(255, 47, 86, 0.75)),
     url(${bg}) top;
   padding: 5rem 3rem 2rem;
   display: grid;
@@ -33,19 +38,19 @@ const SpeedWrapper = styled.section`
     width: 100px;
     height: 100px;
   }
-  @media (min-width: 600px) {
+  @media (min-width: 767px) {
     padding: 5rem 3rem;
   }
   .left {
     grid-column: 1 / -1;
-    @media (min-width: 600px) {
+    @media (min-width: 767px) {
       grid-column: 1 / 6;
     }
   }
   .right {
     grid-column: 1 / -1;
-    @media (min-width: 600px) {
-      grid-column: 6 / -2;
+    @media (min-width: 767px) {
+      grid-column: 7 / -1;
       display: grid;
       align-content: center;
     }
@@ -72,19 +77,27 @@ const LighthouseWrapper = styled.section`
 
 const OfflineWrapper = styled.section`
   width: 100%;
-  height: 500px;
+  min-height: 500px;
   overflow: hidden;
   background: #eee;
   display: grid;
   padding: 3rem 2rem;
   grid-template-columns: repeat(8, 1fr);
   .left {
-    grid-column: 1 / 5;
+    grid-column: 1 / -1;
+    @media (min-width: 600px) {
+      grid-column: 1 / 5;
+    }
   }
   .right {
-    grid-column: 6 / -1;
+    grid-column: 1 / -1;
     .gatsby-image-wrapper {
       max-height: 400px;
+    }
+    @media (min-width: 600px) {
+      grid-column: 6 / -1;
+      display: grid;
+      align-content: center;
     }
   }
 `
@@ -129,6 +142,7 @@ function Services() {
                     </a>
                     , to check the quality of your web page.
                   </p>
+                  <p>Didn't score so well? I can help you with that.</p>
                 </div>
                 <div className="right">
                   <Image
@@ -144,7 +158,7 @@ function Services() {
                     With progressive web apps and service workers, your site
                     will continue to work offline.
                   </p>
-                  <p>Never have to see </p>
+                  <p>You'll never have to see the offline dinosaur</p>
                 </div>
                 <div
                   className="right"

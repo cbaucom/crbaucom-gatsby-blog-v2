@@ -8,6 +8,7 @@ import FrontpageHeroBlurb from '../components/FrontpageHeroBlurb'
 import FrontpageVideo from '../components/FrontpageVideo'
 import PostLoop from '../components/PostLoop'
 import FrontpageContact from '../components/FrontpageContact'
+import Services from '../components/Services'
 
 class IndexPage extends Component {
   constructor(props) {
@@ -36,6 +37,9 @@ class IndexPage extends Component {
           {/*------- Main Image and Blurb -------*/}
           <FrontpageHero />
           <FrontpageHeroBlurb />
+
+          {/* ------- Services Section -------*/}
+          <Services />
 
           {/*------- Projects loop -------*/}
           <div className="container pt3">

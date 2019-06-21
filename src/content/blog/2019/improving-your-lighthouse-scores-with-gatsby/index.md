@@ -40,4 +40,8 @@ Just for fun, I wanted to test my old site. I had last updated it in 2017 and it
 
 ![old Lighthouse score](https://res.cloudinary.com/crbaucom/image/upload/v1549342445/crbaucom-images/crbaucom-lighthouse-before.png)
 
-Not very good! I'm so glad I made the move to Gatsby. It really couldn't be any easier once you get your site all setup. Since I write these blog posts in Markdown, I simply push my new content to Github. Netlify then builds and publishes my updates automatically. It's that easy!
+Not very good! I'm so glad I made the move to Gatsby. It really couldn't be any easier once you get your site all setup.
+
+Go ahead, click around the site and see for yourself just how fast everything is. Pretty slick huh?
+
+Since I write these blog posts in Markdown, I simply push my new content to Github. Netlify then builds and publishes my updates automatically. It's that easy!

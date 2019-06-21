@@ -1,14 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
 import { FaShippingFast } from 'react-icons/fa'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Icon from '../elements'
 import bg from '../assets/img/lightning-pattern-trace-wide.png'
-
-AOS.init()
 
 const ServicesWrapper = styled.section`
   margin: 0 auto;
@@ -27,9 +24,12 @@ const ServicesWrapper = styled.section`
 
 const SpeedWrapper = styled.section`
   width: 100%;
-  background: linear-gradient(rgba(255, 255, 46, 0.7), rgba(255, 47, 86, 0.75)),
-    url(${bg}) top;
-  padding: 5rem 3rem 2rem;
+  /* background: linear-gradient(rgba(255, 255, 46, 0.7), rgba(255, 47, 86, 0.75)),
+    url(${bg}) top; */
+
+  background: rgb(255,130,12);
+  background: linear-gradient(180deg, rgba(229,255,7,0.75) 0%, rgba(255,130,12,0.75) 100%), url(${bg}) top;
+  padding: 4rem 3rem 4rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   text-align: center;
@@ -79,7 +79,17 @@ const OfflineWrapper = styled.section`
   width: 100%;
   min-height: 500px;
   overflow: hidden;
-  background: #eee;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(10, 50, 115, 1) 0%,
+    rgba(10, 100, 150, 1) 50%,
+    rgba(10, 50, 116, 1) 100%
+  );
+  h2,
+  p {
+    color: #fff;
+  }
   display: grid;
   padding: 3rem 2rem;
   grid-template-columns: repeat(8, 1fr);
@@ -103,20 +113,23 @@ const OfflineWrapper = styled.section`
 `
 
 function Services() {
+  useEffect(() => {
+    AOS.init()
+  }, []) // passing an empty array as second argument triggers the callback in useEffect only after the initial render thus replicating `componentDidMount` lifecycle behaviour
+
   return (
     <StaticQuery
       query={servicesQuery}
       render={data => {
         return (
           <ServicesWrapper>
-            {/* <h2>I can help you:</h2> */}
             <div className="service-offers">
               <SpeedWrapper>
                 <div
                   className="left"
-                  data-aos="zoom-out-up"
-                  data-aos-delay="200"
-                  data-aos-duration="500"
+                  data-aos="zoom-in-up"
+                  data-aos-delay="100"
+                  data-aos-duration="400"
                   data-aos-easing="ease-out"
                   data-aos-once="true"
                   data-aos-anchor-placement="center-center"

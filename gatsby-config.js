@@ -115,7 +115,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Chris Baucom - Freelance Web Developer`,
-        short_name: `crbaucom`,
+        short_name: `Hire C B`,
         start_url: `/`,
         background_color: `#eeeeee`,
         theme_color: `#94bae9`,

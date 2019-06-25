@@ -120,7 +120,6 @@ function Services() {
                 <div
                   className="left"
                   data-aos="zoom-in-up"
-                  data-aos-delay="100"
                   data-aos-duration="400"
                   data-aos-easing="ease-out"
                   data-aos-once="true"
@@ -169,7 +168,6 @@ function Services() {
                   className="right"
                   data-aos="slide-left"
                   data-aos-offset="200"
-                  data-aos-delay="150"
                   data-aos-duration="800"
                   data-aos-easing="ease-in-out"
                   data-aos-once="true"

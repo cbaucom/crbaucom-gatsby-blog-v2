@@ -14,6 +14,7 @@ const TechnologiesWrapper = styled.div`
   text-align: center;
   .content--wrapper {
     width: 90vw;
+    animation: 1s ease-in 0s 1 slideInFromBottom;
     margin: 0 auto;
   }
   h1 {

@@ -91,7 +91,7 @@ const OfflineWrapper = styled.section`
     color: #fff;
   }
   display: grid;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   grid-template-columns: repeat(8, 1fr);
   .left {
     grid-column: 1 / -1;

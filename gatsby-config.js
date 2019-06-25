@@ -117,7 +117,7 @@ module.exports = {
         name: `Chris Baucom - Freelance Web Developer`,
         short_name: `Hire C B`,
         start_url: `/`,
-        background_color: `#eeeeee`,
+        background_color: `#94bae9`,
         theme_color: `#94bae9`,
         display: `minimal-ui`,
         icon: `src/assets/cb-icon.png`,

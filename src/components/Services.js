@@ -123,7 +123,8 @@ function Services() {
                   data-aos-duration="400"
                   data-aos-easing="ease-out"
                   data-aos-once="true"
-                  data-aos-anchor-placement="center-center"
+                  data-aos-anchor="#trigger-left"
+                  data-aos-anchor-placement="bottom-center"
                 >
                   <h2>Speed up your site</h2>
                   <FaShippingFast />
@@ -148,7 +149,7 @@ function Services() {
                   </p>
                   <p>Didn't score so well? I can help you with that.</p>
                 </div>
-                <div className="right">
+                <div className="right" id="trigger-right">
                   <Image
                     fluid={data.lighthouseImg.childImageSharp.fluid}
                     alt="Lighthouse score improvement image"
@@ -171,7 +172,8 @@ function Services() {
                   data-aos-duration="800"
                   data-aos-easing="ease-in-out"
                   data-aos-once="true"
-                  data-aos-anchor-placement="top-center"
+                  data-aos-anchor="#trigger-right"
+                  data-aos-anchor-placement="center-center"
                 >
                   <Image
                     fluid={data.offlineImg.childImageSharp.fluid}

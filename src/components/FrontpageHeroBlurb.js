@@ -65,7 +65,7 @@ const FrontpageHeroBlurb = () => (
         Building progressive, responsive, mobile web apps with the best
         technologies.
       </h3>
-      <div className="icon--wrapper">
+      <div className="icon--wrapper" id="trigger-left">
         <Icon name="react-full" />
         <Icon name="gatsby-full" />
         <Icon name="graphql-full" />

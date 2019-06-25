@@ -24,11 +24,13 @@ const ServicesWrapper = styled.section`
 
 const SpeedWrapper = styled.section`
   width: 100%;
-  /* background: linear-gradient(rgba(255, 255, 46, 0.7), rgba(255, 47, 86, 0.75)),
-    url(${bg}) top; */
-
-  background: rgb(255,130,12);
-  background: linear-gradient(180deg, rgba(229,255,7,0.75) 0%, rgba(255,130,12,0.75) 100%), url(${bg}) top;
+  background: rgb(255, 130, 12);
+  background: linear-gradient(
+      180deg,
+      rgba(229, 255, 7, 0.75) 0%,
+      rgba(255, 130, 12, 0.75) 100%
+    ),
+    url(${bg}) top;
   padding: 4rem 3rem 4rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -63,15 +65,11 @@ const LighthouseWrapper = styled.section`
   display: grid;
   padding: 5rem 2rem;
   text-align: center;
-  /* grid-template-rows: repeat(4, 1fr); */
   .left {
     grid-row: 1;
     h4 {
       font-size: 2rem;
     }
-  }
-  .right {
-    /* grid-row: 2 / -1; */
   }
 `
 
@@ -79,13 +77,7 @@ const OfflineWrapper = styled.section`
   width: 100%;
   min-height: 500px;
   overflow: hidden;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(10, 50, 115, 1) 0%,
-    rgba(10, 100, 150, 1) 50%,
-    rgba(10, 50, 116, 1) 100%
-  );
+  background-color: #023767;
   h2,
   p {
     color: #fff;

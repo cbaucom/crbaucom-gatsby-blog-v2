@@ -13,6 +13,10 @@ import appleTouchIcon from '../../static/assets/favicon/apple-touch-icon.png'
 import favicon32 from '../../static/assets/favicon/favicon-32x32.png'
 import favicon16 from '../../static/assets/favicon/favicon-16x16.png'
 
+import LogRocket from 'logrocket'
+
+LogRocket.init('1p8iul/chrisbaucomdev-prod')
+
 const theme = {
   red: '#FF0000',
   black: '#393939',
